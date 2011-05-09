@@ -1,0 +1,7 @@
+alan-gentree.py
+alan.py
+alan/ext/appaerance.py
+alan/ext/logout.py
+alan/ext/music.py
+alan/ext/places.py
+alan/ext/xdgmenu.py

@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-09 22:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: alan-gentree.py:25
+msgid "Web Browser"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Terminal Emulator"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Applications"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Places"
+msgstr ""
+
+#: alan-gentree.py:25 alan/ext/places.py:41
+msgid "Desktop"
+msgstr ""
+
+#: alan-gentree.py:25 alan/ext/logout.py:33
+msgid "Logout"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Extensions"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Music"
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "About Semplice..."
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Appaerance"
+msgstr ""
+
+#: alan/ext/appaerance.py:29
+msgid "Add"
+msgstr ""
+
+#: alan/ext/appaerance.py:30
+msgid "Manage"
+msgstr ""
+
+#: alan/ext/appaerance.py:31
+msgid "Wallpaper"
+msgstr ""
+
+#: alan/ext/appaerance.py:33
+msgid "Appaerance settings"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Lock Screen"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Switch User"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Suspend"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Hibernate"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Shutdown"
+msgstr ""
+
+#: alan/ext/logout.py:33
+msgid "Reboot"
+msgstr ""
+
+#: alan/ext/music.py:160
+msgid "Play"
+msgstr ""
+
+#: alan/ext/music.py:161
+msgid "Pause"
+msgstr ""
+
+#: alan/ext/music.py:162
+msgid "Stop"
+msgstr ""
+
+#: alan/ext/music.py:165
+msgid "Play a random song"
+msgstr ""
+
+#: alan/ext/music.py:180
+msgid "Previous"
+msgstr ""
+
+#: alan/ext/music.py:181
+msgid "Next"
+msgstr ""
+
+#: alan/ext/places.py:44
+msgid "Trash"
+msgstr ""
+
+#: alan/ext/places.py:47
+msgid "Computer"
+msgstr ""
+
+#: alan/ext/places.py:54
+msgid "System (/)"
+msgstr ""
