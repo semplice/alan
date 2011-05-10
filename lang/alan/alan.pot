@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-10 17:08+0200\n"
+"POT-Creation-Date: 2011-05-10 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,22 @@ msgstr ""
 
 #: alan/core/objects/core.py:68
 msgid "Info"
+msgstr ""
+
+#: alan/ext/appearance.py:30
+msgid "Add"
+msgstr ""
+
+#: alan/ext/appearance.py:31
+msgid "Manage"
+msgstr ""
+
+#: alan/ext/appearance.py:32
+msgid "Wallpaper"
+msgstr ""
+
+#: alan/ext/appearance.py:34
+msgid "Appearance settings"
 msgstr ""
 
 #: alan/ext/places.py:43 alan-gentree.py:25
@@ -63,22 +79,6 @@ msgstr ""
 
 #: alan/ext/music.py:183
 msgid "Next"
-msgstr ""
-
-#: alan/ext/appaerance.py:30
-msgid "Add"
-msgstr ""
-
-#: alan/ext/appaerance.py:31
-msgid "Manage"
-msgstr ""
-
-#: alan/ext/appaerance.py:32
-msgid "Wallpaper"
-msgstr ""
-
-#: alan/ext/appaerance.py:34
-msgid "Appaerance settings"
 msgstr ""
 
 #: alan/ext/logout.py:34
@@ -138,5 +138,5 @@ msgid "About Semplice..."
 msgstr ""
 
 #: alan-gentree.py:25
-msgid "Appaerance"
+msgid "Appearance"
 msgstr ""
