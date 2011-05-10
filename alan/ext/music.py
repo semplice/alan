@@ -29,7 +29,7 @@ executable = " ".join(sys.argv)
 
 # Informations about extension ;)
 coders = { "John McKnight (original mpd extension)":"mailto:jmcknight@gmail.com", "Eugenio Paolantonio":"http://blog.medesimo.eu" }
-infos = {"Coders":coders}
+infos = {_("Coders"):coders}
 
 class MPD:
 	def __init__(self):

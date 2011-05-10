@@ -9,6 +9,9 @@
 """ Here all CORE objects (labels, menus etc) """
 
 import alan.core.actions.glob as ga
+import alan.core.translations as trans
+
+_ = trans.translation_init("alan")
 
 def header(text):
 	""" Header """
@@ -62,4 +65,4 @@ def info(authors, sep=True):
 	else:
 		sep = ""
 	
-	return sep + menu("informations", "Info", "\n".join(menus))
+	return sep + menu("informations", _("Info"), "\n".join(menus))

@@ -6,6 +6,8 @@
 #
 # This library helps alan main executable in the process of translating strings.
 
+# Heavly based on http://www.learningpython.com/2006/12/03/translating-your-pythonpygtk-application/
+
 import locale
 import gettext
 
@@ -15,7 +17,7 @@ def translation_init(APP_NAME):
 	#Translation stuff
 
 	#Get the local directory since we are not installing anything
-	local_path = os.path.join(os.path.realpath(os.path.dirname(sys.argv[0])), "lang")
+	local_path = os.path.join(os.path.realpath(os.path.dirname(sys.argv[0])), "lang/alan")
 	# Init the list of languages to support
 	langs = []
 	#Check the default locale
