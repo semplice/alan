@@ -4,7 +4,7 @@
 # Copyright (C) 2011 Eugenio "g7" Paolantonio and the Semplice Team.
 # Work released under the terms of the GNU GPL License, version 3 or later.
 #
-# This file cointain the appaerance extension
+# This file cointain the appearance extension
 
 import alan.core.structure as struct
 import alan.core.objects.core as core
@@ -31,7 +31,7 @@ wallpaperadd = core.item(_("Add"), ga.execute("nitrogen-add-wallpaper")) # Item 
 wallpapermanage = core.item(_("Manage"), ga.execute("nitrogen")) # Item that opens nitrogen
 wallpapermenu = core.menu("wallmenu", _("Wallpaper"), "\n".join((wallpaperadd, wallpapermanage))) # Menu that has on it wallpaperadd and wallpapermanage
 
-themeselector = core.item(_("Appaerance settings"), ga.execute("lxappearance")) # Theme selector
+themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance")) # Theme selector
 
 i(wallpapermenu)
 i(themeselector)
