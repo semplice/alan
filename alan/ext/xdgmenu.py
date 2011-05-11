@@ -2,7 +2,7 @@
 #
 # Alan: Semplice Menu Extension Framework
 # Copyright (C) 2011 Eugenio "g7" Paolantonio and the Semplice Team.
-# Work released under the terms of the GNU GPL License, version 3 or later.
+# Work released under the terms of the GNU GPL License, version 2 or later.
 #
 # This file cointain the xdgmenu extension
 

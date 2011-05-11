@@ -1,0 +1,4 @@
+alan-show-extension.py /usr/bin
+alan-gentree.py /usr/bin
+
+alan/ /usr/share/pyshared

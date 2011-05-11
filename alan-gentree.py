@@ -31,8 +31,17 @@ def parsename(name):
 	
 
 USER = os.getenv("USER")
-execu = "/home/g7/semplice/emily/alan/alan.py"
-conf = "/home/g7/semplice/emily/alan/tree.cfg"
+PWD = os.getenv("PWD")
+
+if not os.path.exists("/usr/bin/alan-show-extension.py"):
+	execu = "/home/g7/semplice/emily/alan/alan-show-extension.py"
+else:
+	execu = "/usr/bin/alan-show-extension.py"
+
+if not os.path.exists("/usr/share/alan/tree.cfg"):
+	conf = "/home/g7/semplice/emily/alan/tree.cfg"
+else:
+	conf = "/usr/share/alan/tree.cfg"
 
 ### THIS IS THE *MAIN* DYNAMIC MENU TREE FOR ALAN.
 ### This makes the menu when right-click on the desktop.
