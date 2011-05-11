@@ -9,8 +9,8 @@ Vcs-Bzr: lp:alan
 Vcs-Browser: https://code.launchpad.net/~semplice-devs/alan/trunk
 
 Package: alan
-Architecture: any
-Depends: ${misc:Depends}, ${python:Depends}
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-mpd
 Description: Openbox menu framework - Main Executable and Extensions
  Alan is a framework that permits to generate dynamic menus
  just with some python code.
@@ -20,7 +20,7 @@ Description: Openbox menu framework - Main Executable and Extensions
  This package contains the main executable and extensions.
 
 Package: alan-config-semplice
-Architecture: any
+Architecture: all
 Recommends: alan
 Description: Openbox menu framework - Semplice Configuration
  Alan is a framework that permits to generate dynamic menus

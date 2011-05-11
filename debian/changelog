@@ -1,3 +1,9 @@
+alan (0.1.2) emily; urgency=low
+
+  * debian/control: Architecture any -> all; alan: Depends += python-mpd
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 11 May 2011 20:37:06 +0200
+
 alan (0.1.1) emily; urgency=low
 
   * alan-show-extension: added "(or an error occoured)" string if
