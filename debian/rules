@@ -16,14 +16,14 @@
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
-LOCALES_DIR = $(CURDIR)/debian/tmp/usr/share/locale
+LOCALES_DIR = $(CURDIR)/debian/alan/usr/share/locale
 
 override_dh_auto_install:
 	# Borrowed from clamtk source package, thank you all
 	@echo Installing locales now...
-	for locale in $(shell ls $(CURDIR)/lang/*.mo | sed 's@.*/\(.*\)\.mo@\1@g'); \
+	for locale in $(shell ls $(CURDIR)/lang/alan/*.mo | sed 's@.*/\(.*\)\.mo@\1@g'); \
 		do mkdir -p $(LOCALES_DIR)/$$locale/LC_MESSAGES/ && \
-		install -m 644 $(CURDIR)/lang/$$locale.mo $(LOCALES_DIR)/$$locale/LC_MESSAGES/alan.mo; \
+		install -m 644 $(CURDIR)/lang/alan/$$locale.mo $(LOCALES_DIR)/$$locale/LC_MESSAGES/alan.mo; \
 	done
 	-rm -rf $(LOCALES_DIR)/alan/
 	dh_auto_install
