@@ -18,7 +18,7 @@ def extension_not_found():
 	menu = struct.PipeMenu()
 	menu.start()
 	
-	menu.insert(core.item("Module is not found!",""))
+	menu.insert(core.item("Module is not found (or an error occoured)!",""))
 	
 	menu.end()
 	

@@ -131,16 +131,16 @@ for player in PLAYERS:
 	# Declare class
 	clas = player()
 
-	if len(sys.argv) > 2:
+	if len(sys.argv) > 3:
 		# Called from an already made pipe menu
-		if clas.NAME == sys.argv[1]:
+		if clas.NAME == sys.argv[2]:
 			if sys.argv[3] == "play": clas.play()
 			if sys.argv[3] == "pause": clas.pause()
 			if sys.argv[3] == "stop": clas.stop()
 			if sys.argv[3] == "restartsong": clas.restartsong()
 			if sys.argv[3] == "prev": clas.prev()
 			if sys.argv[3] == "next": clas.next()
-		sys.exit()
+		sys.exit(0)
 	
 	#######
 	# A simple ASCII mockup :D

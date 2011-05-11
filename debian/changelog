@@ -1,3 +1,11 @@
+alan (0.1.1) emily; urgency=low
+
+  * alan-show-extension: added "(or an error occoured)" string if
+    module can't be loaded (but it exist).
+  * extensions: music.py: fixed play, pause, stop etc commands.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 11 May 2011 20:20:11 +0200
+
 alan (0.1.0) emily; urgency=low
 
   * Initial Release.
