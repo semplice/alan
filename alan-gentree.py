@@ -15,14 +15,14 @@ import alan.core.config as cfg
 
 import alan.core.translations as trans
 
-import os
+import os, shutil
 
 _ = trans.translation_init("alan")
 
 def parsename(name):
 	""" Returns the appropiate name from STOCK_* """
 	
-	defs = {"STOCK_NULL":"", "STOCK_WEB_BROWSER":_("Web Browser"), "STOCK_TERMINAL_EMULATOR":_("Terminal Emulator"), "STOCK_APPLICATIONS":_("Applications"), "STOCK_PLACES":_("Places"), "STOCK_DESKTOP":_("Desktop"), "STOCK_LOGOUT":_("Logout"), "STOCK_EXTENSIONS":_("Extensions"), "STOCK_MUSIC":_("Music"), "STOCK_ABOUT_SEMPLICE":_("About Semplice..."), "STOCK_APPAERANCE":_("Appearance")}
+	defs = {"STOCK_NULL":"", "STOCK_WEB_BROWSER":_("Web Browser"), "STOCK_TERMINAL_EMULATOR":_("Terminal Emulator"), "STOCK_APPLICATIONS":_("Applications"), "STOCK_PLACES":_("Places"), "STOCK_DESKTOP":_("Desktop"), "STOCK_LOGOUT":_("Logout"), "STOCK_EXTENSIONS":_("Extensions"), "STOCK_MUSIC":_("Music"), "STOCK_ABOUT_SEMPLICE":_("About Semplice..."), "STOCK_APPAERANCE":_("Appearance"), "STOCK_INSTALL_SEMPLICE":_("Install Semplice")}
 	
 	if name in defs:
 		return defs[name]
@@ -32,16 +32,28 @@ def parsename(name):
 
 USER = os.getenv("USER")
 PWD = os.getenv("PWD")
+HOME = os.getenv("HOME")
 
 if not os.path.exists("/usr/bin/alan-show-extension.py"):
 	execu = "/home/g7/semplice/emily/alan/alan-show-extension.py"
 else:
 	execu = "/usr/bin/alan-show-extension.py"
 
-if not os.path.exists("/usr/share/alan/tree.cfg"):
-	conf = "/home/g7/semplice/emily/alan/tree.cfg"
-else:
-	conf = "/usr/share/alan/tree.cfg"
+if not os.path.exists(os.path.join(HOME, ".config/alan/tree.cfg")):
+	## Initial configuration
+	
+	# ensure $HOME/.config/alan exists
+	if not os.path.isdir(os.path.join(HOME, ".config/alan")): os.makedirs(os.path.join(HOME, ".config/alan"))
+	
+	# Copy configuration
+	if not os.path.exists("/usr/share/alan/tree.cfg"):
+		conf = "/home/g7/semplice/emily/alan/tree.cfg"
+	else:
+		conf = "/usr/share/alan/tree.cfg"
+	
+	shutil.copy(conf, os.path.join(HOME, ".config/alan/tree.cfg"))
+
+conf = os.path.join(HOME, ".config/alan/tree.cfg")
 
 ### THIS IS THE *MAIN* DYNAMIC MENU TREE FOR ALAN.
 ### This makes the menu when right-click on the desktop.
@@ -65,6 +77,11 @@ categories = conf.printv("categories","Alan").split(" ")
 
 # Begin creating menu
 for cat in categories:
+	if cat == "-":
+		# Separator
+		i(core.separator())
+		continue
+
 	conf.module = "cat:%s" % cat # Change default section
 	name = parsename(conf.printv("name"))
 	extensions = conf.printv("extensions").split(" ")

@@ -21,7 +21,7 @@ _ = trans.translation_init("alan")
 
 
 def exfm(path):
-	return "pcmanfm %s" % path
+	return "pcmanfm \"%s\"" % path
 
 # Informations about extension ;)
 coders = { "Eugenio Paolantonio":"http://blog.medesimo.eu" }
@@ -55,16 +55,18 @@ i(core.separator())
 # Root (/)
 i(core.item(_("System (/)"), ga.execute(exfm("file:///"))))
 
-# Other items listed in /media
-for media in commands.getoutput("LANG=C mount").split("\n"):
-	if "/media" in media:
-		# Is on media. Yay.
-		dire = media.split(" ")[2] # use only the directory name
-		i(core.item(_(os.path.basename(dire).replace("_","__")), ga.execute(exfm("file://%s" % dire))))
+with open("/proc/mounts") as mounts:
 
-i(core.separator())
+	# Other items listed in /media
+	for media in mounts.readlines():
+		if "/media" in media:
+			# Is on media. Yay.
+			dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
+			i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm("file://%s" % dire))))
 
 if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
+	i(core.separator())
+
 	_file = open(os.path.join(HOME, ".gtk-bookmarks"))
 	lines = _file.readlines()
 	for line in lines:

@@ -49,7 +49,7 @@ else:
 
 # Add that choice!
 if last:
-	choice = actions[int(last)] + " (CTRL+ALT+T)"
+	choice = actions[int(last)] + " (CTRL+ALT+SPACE)"
 	i(core.item(choice, ga.execute(ections[int(last)])))
 	i(core.separator())
 
