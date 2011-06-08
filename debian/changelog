@@ -1,3 +1,19 @@
+alan (0.2.1) emily; urgency=low
+
+  * alan-gentree.py: changed to use alan-show-extension intstead of alan-show-extension.py
+  * switched to distutils
+  * debian packaging:
+    - Switched to dh_python2; shipping lib and scripts in /usr/lib/alan;
+    - Symlink /usr/lib/alan/alan-{show-extension,gentree}.py to /usr/bin (without extension)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 08 Jun 2011 20:32:53 +0200
+
+alan (0.2.0) emily; urgency=low
+
+  * New upstream release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 07 Jun 2011 21:39:59 +0200
+
 alan (0.1.2) emily; urgency=low
 
   * debian/control: Architecture any -> all; alan: Depends += python-mpd

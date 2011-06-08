@@ -34,10 +34,10 @@ USER = os.getenv("USER")
 PWD = os.getenv("PWD")
 HOME = os.getenv("HOME")
 
-if not os.path.exists("/usr/bin/alan-show-extension.py"):
+if not os.path.exists("/usr/bin/alan-show-extension"):
 	execu = "/home/g7/semplice/emily/alan/alan-show-extension.py"
 else:
-	execu = "/usr/bin/alan-show-extension.py"
+	execu = "/usr/bin/alan-show-extension"
 
 if not os.path.exists(os.path.join(HOME, ".config/alan/tree.cfg")):
 	## Initial configuration

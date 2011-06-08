@@ -1,0 +1,11 @@
+ConfigParser
+commands
+gettext
+gmenu
+locale
+mpd
+os
+sys
+re
+shutil
+xml.sax.saxutils

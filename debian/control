@@ -2,15 +2,16 @@ Source: alan
 Section: x11
 Priority: optional
 Maintainer: Eugenio (g7) <morarossa@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), python-support, python (>=2.6)
-Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 7.0.50~), python (>=2.6.6-3~)
+X-Python-Version: >= 2.6
+Standards-Version: 3.9.2
 Homepage: http://launchpad.net/alan
 Vcs-Bzr: lp:alan
 Vcs-Browser: https://code.launchpad.net/~semplice-devs/alan/trunk
 
 Package: alan
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-mpd
+Depends: ${misc:Depends}, ${python:Depends}, python-mpd, python-gmenu
 Description: Openbox menu framework - Main Executable and Extensions
  Alan is a framework that permits to generate dynamic menus
  just with some python code.

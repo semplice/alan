@@ -16,9 +16,12 @@
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
-LOCALES_DIR = $(CURDIR)/debian/alan/usr/share/locale
+LOCALES_DIR = $(CURDIR)/debian/tmp/usr/share/locale
 
 override_dh_auto_install:
+	# Install via distutils
+	python setup.py install --root=debian/tmp --install-layout=deb --install-lib=/usr/lib/alan --install-scripts=/usr/lib/alan
+
 	# Borrowed from clamtk source package, thank you all
 	@echo Installing locales now...
 	for locale in $(shell ls $(CURDIR)/lang/alan/*.mo | sed 's@.*/\(.*\)\.mo@\1@g'); \
@@ -26,7 +29,8 @@ override_dh_auto_install:
 		install -m 644 $(CURDIR)/lang/alan/$$locale.mo $(LOCALES_DIR)/$$locale/LC_MESSAGES/alan.mo; \
 	done
 	-rm -rf $(LOCALES_DIR)/alan/
-	dh_auto_install
+
+override_dh_auto_build:
 
 %:
-	dh $@ 
+	dh $@ --with python2
