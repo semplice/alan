@@ -111,6 +111,11 @@ for cat in categories:
 			
 			if _ext == "__itemlist__":
 				# Create item list
+				
+				# If name, create an header
+				if _name:
+					i(core.header(_name))
+				
 				count = int(conf.printv("count"))
 				done = 0
 				while done != count:
