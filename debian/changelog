@@ -5,8 +5,16 @@ alan (0.2.2-1) UNRELEASED; urgency=low
   * debian/: control: depend on python-t9n
   * Do not rely on menu.printm() anymore: alan-show-extension will handle printing
   * As menu.printm() is dropped, a new property is added: menu.final_menu
+  
+  * The user can now add an extension as many times he/she wants
+  * [ext:<name>] will now not declare the extension name, but only the menu id
+  * To specify which extension should be used, a new option in the configuration
+    file was added: ext. (e.g.: ext = xdgmenu)
+  * Some more comments in the configuration file ;)
+  * Dropped the "main_<name>" syntax: to convert a normal category into a 'main' one,
+    just put @ before the category name (only on [Alan] section)
 
- -- Eugenio (g7) <morarossa@gmail.com>  Thu, 11 Aug 2011 19:39:32 +0200
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 11 Aug 2011 22:28:59 +0200
 
 alan (0.2.1.3) emily; urgency=low
 

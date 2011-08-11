@@ -82,6 +82,16 @@ for cat in categories:
 		i(core.separator())
 		continue
 
+	# Check if this is a main menu (@)
+	if cat[0] == "@":
+		# True.
+		IS_MAIN = True
+		
+		# Depure name
+		cat = cat[1:]
+	else:
+		IS_MAIN = False
+
 	conf.module = "cat:%s" % cat # Change default section
 	name = parsename(conf.printv("name"))
 	extensions = conf.printv("extensions").split(" ")
@@ -90,30 +100,34 @@ for cat in categories:
 	for ext in extensions:
 		# Generate extension
 		conf.module = "ext:%s" % ext # Change default section
-		_name = parsename(conf.printv("name"))
 		
-		if "_itemlist_" in ext:
-			# Create item list
-			count = int(conf.printv("count"))
-			fatte = 0
-			while fatte != count:
-				# Create items
-				fatte += 1
-				items.append(core.item(parsename(conf.printv("item%s" % fatte)), ga.execute(conf.printv("item%s_ex" % fatte))))
-		elif ext == "-":
+		if ext == "-":
 			# Separator
 			items.append(core.separator())
-		elif "_menu_" in ext:
-			# Internal menu id
-			items.append(core.menu(conf.printv("id")))
-		elif "_item_" in ext:
-			# Normal menu item
-			items.append(core.item(parsename(conf.printv("name")), ga.execute(conf.printv("executable"))))
 		else:
-			# Is a normal extension, create a pipemenu
-			items.append(core.pipemenu(ext, _name, execu + " %s" % ext))
+			# Normal extension
+			_name = parsename(conf.printv("name")) # Get name
+			_ext = conf.printv("ext") # Get real extension name
+			
+			if _ext == "__itemlist__":
+				# Create item list
+				count = int(conf.printv("count"))
+				done = 0
+				while done != count:
+					# Create items
+					done += 1
+					items.append(core.item(parsename(conf.printv("item%s" % done)), ga.execute(conf.printv("item%s_ex" % done))))
+			elif _ext == "__menu__":
+				# Internal menu id
+				items.append(core.menu(conf.printv("id")))
+			elif _ext == "__item__":
+				# Normal menu item
+				items.append(core.item(parsename(conf.printv("name")), ga.execute(conf.printv("executable"))))
+			else:
+				# An external extension
+				items.append(core.pipemenu(ext, _name, "%s %s" % (execu,_ext)))
 	
-	if "main_" in cat:
+	if IS_MAIN:
 		# We are main? The items should not be in submenu.
 		i("\n".join(items))
 	else:
