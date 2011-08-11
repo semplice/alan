@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-05 12:06+0200\n"
+"POT-Creation-Date: 2011-08-11 19:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,20 +21,24 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: alan/ext/appearance.py:30
+#: alan/ext/appearance.py:30 alan/ext/alan-dropbox.py:53
 msgid "Add"
 msgstr ""
 
-#: alan/ext/appearance.py:31
+#: alan/ext/appearance.py:31 alan/ext/alan-dropbox.py:54
 msgid "Manage"
 msgstr ""
 
-#: alan/ext/appearance.py:32
+#: alan/ext/appearance.py:32 alan/ext/alan-dropbox.py:55
 msgid "Wallpaper"
 msgstr ""
 
-#: alan/ext/appearance.py:34
+#: alan/ext/appearance.py:34 alan/ext/alan-dropbox.py:57
 msgid "Appearance settings"
+msgstr ""
+
+#: alan/ext/alan-dropbox.py:44
+msgid "Open Dropbox folder"
 msgstr ""
 
 #: alan/ext/places.py:43 alan-gentree.py:25
@@ -107,6 +111,14 @@ msgstr ""
 
 #: alan/ext/logout.py:34
 msgid "Reboot"
+msgstr ""
+
+#: alan-show-extension.py:48
+msgid "Module not found!"
+msgstr ""
+
+#: alan-show-extension.py:50
+msgid "An error occoured while running the module."
 msgstr ""
 
 #: alan-gentree.py:25

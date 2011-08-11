@@ -12,7 +12,7 @@ import alan.core.actions.glob as ga
 
 import os, sys
 
-import alan.core.translations as trans
+import t9n.library as trans
 
 HOME = os.getenv("HOME")
 
@@ -62,6 +62,3 @@ for num, robo in actions.iteritems():
 
 # End
 menu.end()
-
-#print menu.menu
-menu.printm()

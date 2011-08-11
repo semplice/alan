@@ -33,7 +33,8 @@ class PipeMenu:
 		
 		self.insert("</openbox_pipe_menu>")
 	
-	def printm(self):
+	@property
+	def final_menu(self):
 		""" Prints the menu """
 		
-		print "\n".join(self.menu)
+		return "\n".join(self.menu)

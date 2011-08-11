@@ -88,6 +88,3 @@ i("\n".join(map(walk_menu, gmenu.lookup_tree(_ap).root.get_contents())))
 
 # End
 menu.end()
-
-#print menu.menu
-menu.printm()

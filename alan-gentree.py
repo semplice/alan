@@ -35,7 +35,7 @@ PWD = os.getenv("PWD")
 HOME = os.getenv("HOME")
 
 if not os.path.exists("/usr/bin/alan-show-extension"):
-	execu = "/home/g7/semplice/emily/alan/alan-show-extension.py"
+	execu = "/home/g7/semplice/emily/alan/alan/alan-show-extension.py"
 else:
 	execu = "/usr/bin/alan-show-extension"
 
@@ -56,7 +56,7 @@ if not os.path.exists(os.path.join(HOME, ".config/alan/tree.cfg")):
 conf = os.path.join(HOME, ".config/alan/tree.cfg")
 
 ### THIS IS THE *MAIN* DYNAMIC MENU TREE FOR ALAN.
-### This makes the menu when right-click on the desktop.
+### This makes the menu when right-clicking on the desktop.
 ### YAY.
 
 # Read configuration
@@ -122,4 +122,4 @@ for cat in categories:
 	
 
 menu.end()
-menu.printm()
+print menu.final_menu

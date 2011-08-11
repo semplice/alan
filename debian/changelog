@@ -1,3 +1,19 @@
+alan (0.2.2-1) UNRELEASED; urgency=low
+
+  * Use t9n.library instead of alan.translations (which is basically the same thing)
+  * Handle separately the 'Module not found' and 'An error occoured when running the module' errors
+  * debian/: control: depend on python-t9n
+  * Do not rely on menu.printm() anymore: alan-show-extension will handle printing
+  * As menu.printm() is dropped, a new property is added: menu.final_menu
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 11 Aug 2011 19:39:32 +0200
+
+alan (0.2.1.3) emily; urgency=low
+
+  * Building source with bzr-builddeb; should be resolved alan-dropbox.py issue.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 06 Jul 2011 13:04:14 +0200
+
 alan (0.2.1.2) emily; urgency=low
 
   * Added (partial) turkish translation.

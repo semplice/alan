@@ -9,8 +9,12 @@
 import alan.core.modulehelper as mod
 import sys
 
-def extension_not_found():
-	""" when extension is not found, do this. """
+import t9n.library
+
+_ = t9n.library.translation_init("alan")
+
+def error(text):
+	""" Display an error if something went wrong. """
 	
 	import alan.core.structure as struct
 	import alan.core.objects.core as core
@@ -18,14 +22,14 @@ def extension_not_found():
 	menu = struct.PipeMenu()
 	menu.start()
 	
-	menu.insert(core.item("Module is not found (or an error occoured)!",""))
+	menu.insert(core.item(text,""))
 	
 	menu.end()
 	
-	menu.printm()
+	print menu.final_menu
 
 
-# Load module by read sys.argv[1]
+# Load module by reading sys.argv[1]
 
 if len(sys.argv) < 2:
 	extension_not_found()
@@ -37,6 +41,12 @@ ext = sys.argv[1]
 try:
 	module = mod.Extension(ext)
 	loaded = module.load()
+	
+	# Print menu
+	print loaded.menu.final_menu
+except ImportError:
+	error(_("Module not found!"))
 except:
-	extension_not_found()
+	error(_("An error occoured while running the module."))
+finally:
 	sys.exit()

@@ -10,7 +10,7 @@ import alan.core.structure as struct
 import alan.core.objects.core as core
 import alan.core.actions.glob as ga
 
-import alan.core.translations as trans
+import t9n.library as trans
 
 import os, sys, commands
 
@@ -77,6 +77,3 @@ if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 
 # End
 menu.end()
-
-#print menu.menu
-menu.printm()
