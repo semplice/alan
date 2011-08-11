@@ -13,9 +13,9 @@ import alan.core.actions.glob as ga
 
 import alan.core.config as cfg
 
-import alan.core.translations as trans
+import t9n.library as trans
 
-import os, shutil
+import os
 
 _ = trans.translation_init("alan")
 
@@ -39,21 +39,11 @@ if not os.path.exists("/usr/bin/alan-show-extension"):
 else:
 	execu = "/usr/bin/alan-show-extension"
 
-if not os.path.exists(os.path.join(HOME, ".config/alan/tree.cfg")):
-	## Initial configuration
-	
-	# ensure $HOME/.config/alan exists
-	if not os.path.isdir(os.path.join(HOME, ".config/alan")): os.makedirs(os.path.join(HOME, ".config/alan"))
-	
-	# Copy configuration
-	if not os.path.exists("/usr/share/alan/tree.cfg"):
-		conf = "/home/g7/semplice/emily/alan/tree.cfg"
-	else:
-		conf = "/usr/share/alan/tree.cfg"
-	
-	shutil.copy(conf, os.path.join(HOME, ".config/alan/tree.cfg"))
-
-conf = os.path.join(HOME, ".config/alan/tree.cfg")
+if not os.path.exists(os.path.join(HOME, ".config/alan/tree.conf")):
+	## Use default configuration
+	conf = "/etc/alan/tree.conf"
+else:
+	conf = os.path.join(HOME, ".config/alan/tree.conf")
 
 ### THIS IS THE *MAIN* DYNAMIC MENU TREE FOR ALAN.
 ### This makes the menu when right-clicking on the desktop.
