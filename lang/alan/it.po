@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-06-05 12:06+0200\n"
+"POT-Creation-Date: 2011-08-11 23:56+0200\n"
 "PO-Revision-Date: 2011-06-05 10:18+0000\n"
-"Last-Translator: Eugenio \"g7\" Paolantonio <morarossa@gmail.com>\n"
+"Last-Translator: Eugenio Paolantonio <me@medesimo.eu>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-07-13 05:33+0000\n"
-"X-Generator: Launchpad (build 13168)\n"
+"X-Launchpad-Export-Date: 2011-08-12 05:10+0000\n"
+"X-Generator: Launchpad (build 13662)\n"
 
 #: alan/core/objects/core.py:68
 msgid "Info"
@@ -109,6 +109,14 @@ msgstr "Spegni"
 msgid "Reboot"
 msgstr "Riavvia"
 
+#: alan-show-extension.py:48
+msgid "Module not found!"
+msgstr ""
+
+#: alan-show-extension.py:50
+msgid "An error occoured while running the module."
+msgstr ""
+
 #: alan-gentree.py:25
 msgid "Web Browser"
 msgstr "Browser Web"
@@ -144,6 +152,3 @@ msgstr "Aspetto"
 #: alan-gentree.py:25
 msgid "Install Semplice"
 msgstr "Installa Semplice"
-
-#~ msgid "Appaerance settings"
-#~ msgstr "Impostazioni dell'aspetto"
