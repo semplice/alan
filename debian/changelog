@@ -1,3 +1,9 @@
+alan (0.3.1-1) emily; urgency=low
+
+  * typo occoured -> occurred
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 12 Aug 2011 11:20:28 +0200
+
 alan (0.3.0-1) emily; urgency=low
 
   * Use t9n.library instead of alan.translations (which is basically the same thing)

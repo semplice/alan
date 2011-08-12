@@ -47,6 +47,6 @@ try:
 except ImportError:
 	error(_("Module not found!"))
 except:
-	error(_("An error occoured while running the module."))
+	error(_("An error occurred while running the module."))
 finally:
 	sys.exit()
