@@ -104,7 +104,7 @@ for cat in categories:
 				
 				# If name, create an header
 				if _name:
-					i(core.header(_name))
+					items.append(core.header(_name))
 				
 				count = int(conf.printv("count"))
 				done = 0
