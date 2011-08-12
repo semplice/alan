@@ -2,8 +2,9 @@ alan (0.3.1-1) emily; urgency=low
 
   * typo occoured -> occurred
   * gentree: __itemlist__: do not directly insert header, append to 'items' instead.
+  * removed deprecated alan.core.translations.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 12 Aug 2011 17:14:23 +0200
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 12 Aug 2011 20:45:02 +0200
 
 alan (0.3.0-1) emily; urgency=low
 
