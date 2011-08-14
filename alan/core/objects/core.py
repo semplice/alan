@@ -9,7 +9,7 @@
 """ Here all CORE objects (labels, menus etc) """
 
 import alan.core.actions.glob as ga
-import alan.core.translations as trans
+import t9n.library as trans
 
 _ = trans.translation_init("alan")
 

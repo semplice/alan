@@ -1,3 +1,9 @@
+alan (0.3.1.2-1) emily; urgency=medium
+
+  * Removed reference on alan.core.translations in objects/core.py
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 14 Aug 2011 20:46:36 +0200
+
 alan (0.3.1.1-1) emily; urgency=low
 
   * Updated translations.
