@@ -38,8 +38,6 @@ import sys, os
 import gmenu, re, sys
 from xml.sax.saxutils import escape
 
-import t9n.library
-
 # Informations about extension ;)
 coders = { "Luke Macken (xdg-menu.py)":"mailto:lmacken@redhat.com", "Miroslav Lichvar (xdg-menu.py)":"mailto:mlichvar@redhat.com", "Eugenio \"g7\" Paolantonio":"http://blog.medesimo.eu" }
 infos = {"Coders":coders}
