@@ -17,8 +17,9 @@ import os, sys, commands
 HOME = os.getenv("HOME")
 USER = os.getenv("USER")
 
-_ = trans.translation_init("alan")
+ICONS = os.getenv("ALANICONS")
 
+_ = trans.translation_init("alan")
 
 def exfm(path):
 	return "pcmanfm \"%s\"" % path
@@ -37,32 +38,42 @@ i = menu.insert
 ### Begin!
 
 # Home
-i(core.item(USER, ga.execute(exfm("file://%s" % HOME))))
+i(core.item(USER, ga.execute(exfm("file://%s" % HOME)), icon="user-home"))
 
 # Desktop
-i(core.item(_("Desktop"), ga.execute(exfm("file://%s" % os.path.join(HOME,"Desktop")))))
+i(core.item(_("Desktop"), ga.execute(exfm("file://%s" % os.path.join(HOME,"Desktop"))), icon="user-desktop"))
 
 # Trash
-i(core.item(_("Trash"), ga.execute(exfm("trash://"))))
+i(core.item(_("Trash"), ga.execute(exfm("trash://")), icon="user-trash"))
 
 # Computer
-i(core.item(_("Computer"), ga.execute(exfm("computer://"))))
+i(core.item(_("Computer"), ga.execute(exfm("computer://")), icon="computer"))
 
 i(core.separator())
 
 #### MOUNTED ITEMS
 
 # Root (/)
-i(core.item(_("System (/)"), ga.execute(exfm("file:///"))))
+i(core.item(_("System (/)"), ga.execute(exfm("file:///")), icon="drive-harddisk"))
 
 with open("/proc/mounts") as mounts:
 
 	# Other items listed in /media
 	for media in mounts.readlines():
 		if "/media" in media:
+			
+			if ICONS:
+				if "iso9660" in media:
+					# It is a CD. Maybe.
+					icon = "media-optical"
+				else:
+					icon = "drive-harddisk"
+			else:
+				icon = ""
+			
 			# Is on media. Yay.
 			dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
-			i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm("file://%s" % dire))))
+			i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm("file://%s" % dire)), icon=icon))
 
 if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 	i(core.separator())
@@ -73,7 +84,7 @@ if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 		line = line.split(" ")
 		directory = line[0]
 		name = " ".join(line[1:]).replace("_","__")
-		i(core.item(name, ga.execute(exfm(directory))))
+		i(core.item(name, ga.execute(exfm(directory)), icon="folder"))
 
 # End
 menu.end()

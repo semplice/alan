@@ -7,7 +7,8 @@
 #
 
 import alan.core.modulehelper as mod
-import sys
+import alan.core.config as cfg
+import sys, os
 
 import t9n.library
 
@@ -35,12 +36,22 @@ if len(sys.argv) < 2:
 	extension_not_found()
 	sys.exit()
 
-ext = sys.argv[1]
+name = sys.argv[1]
+
+# Read configuration file, and search for name
+cfg = cfg.load_config("ext:%s" % name)
+
+# Get extension name:
+ext = cfg.printv("ext")
+
+# Should use icons?
+if cfg.printv("enable_icons","Alan"):
+	os.environ["ALANICONS"] = "True"
 
 # Load module
 try:
 	module = mod.Extension(ext)
-	loaded = module.load()
+	loaded = module.load(cfg)
 	
 	# Print menu
 	print loaded.menu.final_menu

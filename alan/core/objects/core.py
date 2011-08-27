@@ -9,6 +9,7 @@
 """ Here all CORE objects (labels, menus etc) """
 
 import alan.core.actions.glob as ga
+import alan.core.objects.icons as ico
 import t9n.library as trans
 
 _ = trans.translation_init("alan")
@@ -23,33 +24,49 @@ def separator():
 	
 	return '<separator />'
 
-def menu(id, label=False, objects=""):
+def menu(id, label="", objects="", icon=""):
 	""" Inline menu. "objects" should already exists. """
 		
-	if label != False:
+	if label:
 		label = "label=\"%s\"" % label.replace('"', '').replace("&","and")
+	
+	if icon and ico.get_icon(icon):
+		icon = "icon=\"%s\"" % ico.get_icon(icon)
 	else:
-		label = ""
+		icon = ""
 	
-	return """<menu id="%s" %s>
+	return """<menu id="%s" %s %s>
 	%s
-</menu>""" % (id, label, objects)
+</menu>""" % (id, label, icon, objects)
 
-def pipemenu(id, label, command):
+def pipemenu(id, label, command, icon=""):
 	""" Call a pipe menu. """
-	
-	return """<menu id="%s" label="%s" execute="%s" />""" % (id, label.replace('"','').replace("&","and"), command)
 
-def item(label, action):
+	if icon and ico.get_icon(icon):
+		icon = "icon=\"%s\"" % ico.get_icon(icon)
+	else:
+		icon = ""
+
+	return """<menu id="%s" label="%s" execute="%s" %s />""" % (id, label.replace('"','').replace("&","and"), command, icon)
+
+def item(label, action, icon=""):
 	""" Item. Action should already exist. """
-	
-	return """<item label="%s">
-	%s
-</item>""" % (label.replace('"',''), action)
 
-def info(authors, sep=True):
+	if icon and ico.get_icon(icon):
+		icon = "icon=\"%s\"" % ico.get_icon(icon)
+	else:
+		icon = ""
+
+	return """<item label="%s" %s>
+	%s
+</item>""" % (label.replace('"',''), icon, action)
+
+def info(authors, sep=True, icon=False):
 	""" Displays informations on the extension.
 	authors should be a dict which contains categories (coders, documentation etc). Every category should have another dict with a name and an email/website."""
+
+	if icon:
+		icon = "gtk-about"
 
 	menus = []
 	for lab,cat in authors.iteritems():
@@ -65,4 +82,4 @@ def info(authors, sep=True):
 	else:
 		sep = ""
 	
-	return sep + menu("informations", _("Info"), "\n".join(menus))
+	return sep + menu("informations", _("Info"), "\n".join(menus), icon=icon)

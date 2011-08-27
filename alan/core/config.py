@@ -72,4 +72,18 @@ class ConfigRead(Config):
 		if self.has_option(section, opt):
 			return self.get(section, opt)
 		else:
-			return "false" # # Return a blank string, assuming that the value is null.
+			return False
+
+def load_config(module=False):
+	""" Returns a loaded ConfigRead object. """
+	
+	HOME = os.getenv("HOME")
+	
+	if not os.path.exists(os.path.join(HOME, ".config/alan/tree.conf")):
+		## Use default configuration
+		conf = "/etc/alan/tree.conf"
+	else:
+		conf = os.path.join(HOME, ".config/alan/tree.conf")
+	
+	return ConfigRead(conf, module=module)
+

@@ -1,3 +1,17 @@
+alan (0.4.0-1) UNRELEASED; urgency=low
+
+  * Added icon support. Requires Openbox 3.5.0 and enable_icons = True
+    in config.
+  * core/config.py: return False instead of "false" if an option isn't
+    on the configuration file.
+  * core/config.py: added load_config() function, loads a configuration.
+    replaces the configuration loading process in alan-gentree.py
+  * alan-show-extension: add configuration support. Use ids instead of
+    real extension name in command-line argument.
+  * ext/*: icon support, except for music.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 11:32:47 +0200
+
 alan (0.3.1.2-1) emily; urgency=medium
 
   * Removed reference on alan.core.translations in objects/core.py

@@ -27,11 +27,11 @@ i = menu.insert
 
 ### Begin!
 
-wallpaperadd = core.item(_("Add"), ga.execute("nitrogen-add-wallpaper")) # Item that opens nitrogen-add-wallpaper
-wallpapermanage = core.item(_("Manage"), ga.execute("nitrogen")) # Item that opens nitrogen
-wallpapermenu = core.menu("wallmenu", _("Wallpaper"), "\n".join((wallpaperadd, wallpapermanage))) # Menu that has on it wallpaperadd and wallpapermanage
+wallpaperadd = core.item(_("Add"), ga.execute("nitrogen-add-wallpaper"), icon="gtk-add") # Item that opens nitrogen-add-wallpaper
+wallpapermanage = core.item(_("Manage"), ga.execute("nitrogen"), icon="preferences-desktop-wallpaper") # Item that opens nitrogen
+wallpapermenu = core.menu("wallmenu", _("Wallpaper"), "\n".join((wallpaperadd, wallpapermanage)), icon="preferences-desktop-wallpaper") # Menu that has on it wallpaperadd and wallpapermanage
 
-themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance")) # Theme selector
+themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance"), icon="preferences-desktop-theme") # Theme selector
 
 i(wallpapermenu)
 i(themeselector)

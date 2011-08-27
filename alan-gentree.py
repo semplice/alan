@@ -8,14 +8,13 @@
 # Generate a menu tree.
 
 import alan.core.structure as struct
-import alan.core.objects.core as core
-import alan.core.actions.glob as ga
 
 import alan.core.config as cfg
 
 import t9n.library as trans
 
 import os
+import __builtin__
 
 _ = trans.translation_init("alan")
 
@@ -32,25 +31,29 @@ def parsename(name):
 
 USER = os.getenv("USER")
 PWD = os.getenv("PWD")
-HOME = os.getenv("HOME")
 
 if not os.path.exists("/usr/bin/alan-show-extension"):
 	execu = "/home/g7/semplice/emily/alan/alan/alan-show-extension.py"
 else:
 	execu = "/usr/bin/alan-show-extension"
 
-if not os.path.exists(os.path.join(HOME, ".config/alan/tree.conf")):
-	## Use default configuration
-	conf = "/etc/alan/tree.conf"
-else:
-	conf = os.path.join(HOME, ".config/alan/tree.conf")
-
 ### THIS IS THE *MAIN* DYNAMIC MENU TREE FOR ALAN.
 ### This makes the menu when right-clicking on the desktop.
 ### YAY.
 
 # Read configuration
-conf = cfg.ConfigRead(conf)
+conf = cfg.load_config()
+
+## Begin with menu creation. Should read from tree.cfg
+categories = conf.printv("categories","Alan").split(" ")
+
+# Should enable icons?
+icons = conf.printv("enable_icons","Alan")
+if icons: os.environ["ALANICONS"] = icons
+
+# Load objects now
+import alan.core.objects.core as core
+import alan.core.actions.glob as ga
 
 # Create menu object
 menu = struct.PipeMenu()
@@ -61,9 +64,6 @@ i = menu.insert
 
 # Header
 i(core.header(USER))
-
-## Begin with menu creation. Should read from tree.cfg
-categories = conf.printv("categories","Alan").split(" ")
 
 # Begin creating menu
 for cat in categories:
@@ -85,6 +85,8 @@ for cat in categories:
 	conf.module = "cat:%s" % cat # Change default section
 	name = parsename(conf.printv("name"))
 	extensions = conf.printv("extensions").split(" ")
+	icon = conf.printv("icon")
+	if not icons or not icon: icon = ""
 		
 	items = []
 	for ext in extensions:
@@ -99,6 +101,9 @@ for cat in categories:
 			_name = parsename(conf.printv("name")) # Get name
 			_ext = conf.printv("ext") # Get real extension name
 			
+			_icon = conf.printv("icon")
+			if not icons or not _icon: _icon = ""
+			
 			if _ext == "__itemlist__":
 				# Create item list
 				
@@ -111,23 +116,28 @@ for cat in categories:
 				while done != count:
 					# Create items
 					done += 1
-					items.append(core.item(parsename(conf.printv("item%s" % done)), ga.execute(conf.printv("item%s_ex" % done))))
+
+					# Get object icon
+					_icon = conf.printv("icon%s" % done)
+					if not icons or not _icon: _icon = ""
+
+					items.append(core.item(parsename(conf.printv("item%s" % done)), ga.execute(conf.printv("item%s_ex" % done)), icon=_icon))
 			elif _ext == "__menu__":
 				# Internal menu id
-				items.append(core.menu(conf.printv("id")))
+				items.append(core.menu(conf.printv("id"), icon=_icon))
 			elif _ext == "__item__":
 				# Normal menu item
-				items.append(core.item(parsename(conf.printv("name")), ga.execute(conf.printv("executable"))))
+				items.append(core.item(parsename(conf.printv("name")), ga.execute(conf.printv("executable")), icon=_icon))
 			else:
 				# An external extension
-				items.append(core.pipemenu(ext, _name, "%s %s" % (execu,_ext)))
+				items.append(core.pipemenu(ext, _name, "%s %s" % (execu,ext), icon=_icon))
 	
 	if IS_MAIN:
 		# We are main? The items should not be in submenu.
 		i("\n".join(items))
 	else:
 		# Generate a submenu and then add the items.
-		i(core.menu(cat, name, "\n".join(items)))
+		i(core.menu(cat, name, "\n".join(items), icon=icon))
 	
 
 menu.end()

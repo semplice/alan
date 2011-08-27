@@ -17,7 +17,7 @@ class Extension():
 		
 		self.modulename = modulename
 	
-	def load(self):
+	def load(self, cfg):
 		# This http://stackoverflow.com/questions/951124/dynamic-loading-of-python-modules/951846#951846 is very helpful! Thanks!
 		module = "alan.ext.%s" % self.modulename
 		self.module = __import__(module)
@@ -26,7 +26,7 @@ class Extension():
 			self.module = getattr(self.module, comp)
 		
 		self.mloaded = self.module
-		return self.mloaded
+		return self.mloaded(cfg)
 	
 	def __del__(self):
 		del self.module
