@@ -24,8 +24,9 @@ alan (0.4.0-1) UNRELEASED; urgency=low
     return relative booleans instead of string.
   * debian/* and setup.cfg:
     - Ship alan to /usr/share/alan instead of /usr/lib/alan
+  * tree.conf: added icons, split_menu = False.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 12:37:22 +0200
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 12:52:15 +0200
 
 alan (0.3.1.2-1) emily; urgency=medium
 
