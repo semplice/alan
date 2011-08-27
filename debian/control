@@ -1,7 +1,7 @@
 Source: alan
 Section: x11
 Priority: optional
-Maintainer: Eugenio (g7) <morarossa@gmail.com>
+Maintainer: Eugenio Paolantonio (g7) <me@medesimo.eu>
 Build-Depends: debhelper (>= 7.0.50~), python (>=2.6.6-3~)
 X-Python-Version: >= 2.6
 Standards-Version: 3.9.2

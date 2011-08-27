@@ -49,7 +49,7 @@ categories = conf.printv("categories","Alan").split(" ")
 
 # Should enable icons?
 icons = conf.printv("enable_icons","Alan")
-if icons: os.environ["ALANICONS"] = icons
+if icons: os.environ["ALANICONS"] = "True"
 
 # Load objects now
 import alan.core.objects.core as core

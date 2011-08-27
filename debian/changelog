@@ -1,3 +1,10 @@
+alan (0.4.0~pre1.2-1) emily; urgency=low
+
+  * Do not store a bool in ALANICONS.
+  * Maintainer changed to match my new GPG key.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 20:39:43 +0200
+
 alan (0.4.0~pre1.1-1) emily; urgency=low
 
   * Fixed separator issues in alan-gentree.
