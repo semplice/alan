@@ -69,7 +69,7 @@ i(core.header(USER))
 for cat in categories:
 	if cat == "-":
 		# Separator
-		i(core.separator())
+		i(core.separator)
 		continue
 
 	# Check if this is a main menu (@)
@@ -95,7 +95,7 @@ for cat in categories:
 		
 		if ext == "-":
 			# Separator
-			items.append(core.separator())
+			items.append(core.separator)
 		else:
 			# Normal extension
 			_name = parsename(conf.printv("name")) # Get name

@@ -1,3 +1,9 @@
+alan (0.4.0~pre1.1-1) emily; urgency=low
+
+  * Fixed separator issues in alan-gentree.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 20:19:41 +0200
+
 alan (0.4.0~pre1-1) emily; urgency=low
 
   * Added icon support. Requires Openbox 3.5.0 and enable_icons = True
