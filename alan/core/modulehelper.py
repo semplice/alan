@@ -26,7 +26,7 @@ class Extension():
 			self.module = getattr(self.module, comp)
 		
 		self.mloaded = self.module
-		return self.mloaded(cfg)
+		return self.mloaded.Extension(cfg)
 	
 	def __del__(self):
 		del self.module

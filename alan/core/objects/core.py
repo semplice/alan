@@ -19,10 +19,12 @@ def header(text):
 	
 	return '<separator label="%s" />' % text
 
-def separator():
-	""" A simple separator """
-	
-	return '<separator />'
+#def separator():
+#	""" A simple separator """
+#	
+#	return '<separator />'
+
+separator = "<separator />"
 
 def menu(id, label="", objects="", icon=""):
 	""" Inline menu. "objects" should already exists. """
@@ -78,7 +80,7 @@ def info(authors, sep=True, icon=False):
 		menus.append(menu(lab, lab, "\n".join(work)))
 	
 	if sep:
-		sep = separator() + "\n"
+		sep = separator + "\n"
 	else:
 		sep = ""
 	

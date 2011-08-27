@@ -31,6 +31,8 @@ import alan.core.structure as struct
 import alan.core.objects.core as core
 import alan.core.actions.glob as ga
 
+import alan.core.extension
+
 import sys, os
 
 import gmenu, re, sys
@@ -42,75 +44,84 @@ import t9n.library
 coders = { "Luke Macken (xdg-menu.py)":"mailto:lmacken@redhat.com", "Miroslav Lichvar (xdg-menu.py)":"mailto:mlichvar@redhat.com", "Eugenio \"g7\" Paolantonio":"http://blog.medesimo.eu" }
 infos = {"Coders":coders}
 
-_ap = False
+class Extension(alan.core.extension.Extension):
+	def run(self):
+				
+		_ap = False
 
-# Should edit menu?
-if len(sys.argv) > 2:
-	if sys.argv[2] == "sett":
-		_ap = "gnome-settings.menu"
-		ids = " ".join(sys.argv[3:])
-	else:
-		# Get ids
-		ids = " ".join(sys.argv[2:])
-else:
-	ids = ""
+		# Get split_menu
+		split = self.cfg.printv("split_menu")
 
-def walk_menu(entry):
-	if entry.get_type() == gmenu.TYPE_DIRECTORY and ids:
-		obj = "\n".join(map(walk_menu, entry.get_contents()))
-		return core.menu(escape(entry.menu_id), escape(entry.get_name()), obj, icon=entry.get_icon())
-	elif entry.get_type() == gmenu.TYPE_DIRECTORY:
-		if entry.menu_id in ("Administration","Preferences"):
-			_id = "sett %s" % entry.menu_id
+		if split:
+			# Should edit menu?
+			if len(sys.argv) > 2:
+				if sys.argv[2] == "sett":
+					_ap = "gnome-settings.menu"
+					ids = " ".join(sys.argv[3:])
+				else:
+					# Get ids
+					ids = " ".join(sys.argv[2:])
+			else:
+				ids = ""
+
+		def walk_menu(entry):
+			if entry.get_type() == gmenu.TYPE_DIRECTORY and split and ids or entry.get_type() == gmenu.TYPE_DIRECTORY and not split:
+				obj = "\n".join(map(walk_menu, entry.get_contents()))
+				return core.menu(escape(entry.menu_id), escape(entry.get_name()), obj, icon=entry.get_icon())
+			elif entry.get_type() == gmenu.TYPE_DIRECTORY and split:
+				if entry.menu_id in ("Administration","Preferences"):
+					_id = "sett %s" % entry.menu_id
+				else:
+					_id = entry.menu_id
+				
+				return core.pipemenu(escape(entry.menu_id), escape(entry.get_name()), "alan-show-extension %s %s" % (sys.argv[1], _id), icon=entry.get_icon())
+			elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
+				command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
+				if entry.launch_in_terminal:
+					command = 'xterm -title "%s" -e %s' % \
+						(entry.get_name(), command)
+				
+				# New action
+				act = ga.execute(escape(command))
+				# Incorporate action in item
+				item = core.item(escape(entry.get_name()), act, icon=entry.get_icon())
+				
+				return item
+
+		# Initiate pipemenu
+		self.menu = struct.PipeMenu()
+		self.menu.start() # add initial tag
+
+		# Alias menu.insert() to i()
+		i = self.menu.insert
+
+		### Begin!
+
+		# add things on APPLICATIONS MENU, see walk_menu.
+		# Obtain applications menu.
+		if not _ap:
+			if os.path.exists("/etc/xdg/menus/applications.menu"):
+				_ap = "applications.menu"
+			else:
+				_ap = "gnome-applications.menu"
+		if split:
+			path = "/" + ids
 		else:
-			_id = entry.menu_id
-		
-		return core.pipemenu(escape(entry.menu_id), escape(entry.get_name()), "alan-show-extension %s %s" % (sys.argv[1], _id), icon=entry.get_icon())
-	elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
-		command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
-		if entry.launch_in_terminal:
-			command = 'xterm -title "%s" -e %s' % \
-				(entry.get_name(), command)
-		
-		# New action
-		act = ga.execute(escape(command))
-		# Incorporate action in item
-		item = core.item(escape(entry.get_name()), act, icon=entry.get_icon())
-		
-		return item
+			path = "/"
+		i("\n".join(map(walk_menu, gmenu.lookup_tree(_ap).get_directory_from_path(path).get_contents())))
 
-# Initiate pipemenu
-menu = struct.PipeMenu()
-menu.start() # add initial tag
+		if not split or not ids:
+			i(core.separator)
 
-# Alias menu.insert() to i()
-i = menu.insert
+			# New menu, and on it map the Settings menu ;)
+			if os.path.exists("/etc/xdg/menus/settings.menu"):
+				_ap = "settings.menu"
+			else:
+				_ap = "gnome-settings.menu"
+			i("\n".join(map(walk_menu, gmenu.lookup_tree(_ap).root.get_contents())))
 
-### Begin!
+		# Display info object
+		#i(core.info(infos))
 
-#gmenu.lookup_tree("applications.menu").get_directory_from_path("/Office").menu_id
-
-# add things on APPLICATIONS MENU, see walk_menu.
-# Obtain applications menu.
-if not _ap:
-	if os.path.exists("/etc/xdg/menus/applications.menu"):
-		_ap = "applications.menu"
-	else:
-		_ap = "gnome-applications.menu"
-i("\n".join(map(walk_menu, gmenu.lookup_tree(_ap).get_directory_from_path("/" + ids).get_contents())))
-
-if not ids:
-	i(core.separator())
-
-	# New menu, and on it map the Settings menu ;)
-	if os.path.exists("/etc/xdg/menus/settings.menu"):
-		_ap = "settings.menu"
-	else:
-		_ap = "gnome-settings.menu"
-	i("\n".join(map(walk_menu, gmenu.lookup_tree(_ap).root.get_contents())))
-
-# Display info object
-#i(core.info(infos))
-
-# End
-menu.end()
+		# End
+		self.menu.end()

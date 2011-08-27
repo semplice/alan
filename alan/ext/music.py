@@ -18,6 +18,7 @@ import alan.core.objects.core as core
 import alan.core.actions.glob as ga
 import t9n.library as trans
 
+import alan.core.extension
 
 import mpd
 import os, sys
@@ -113,101 +114,104 @@ class MPD:
 		return albums_all
 		
 
-# Initiate pipemenu
-menu = struct.PipeMenu()
-menu.start() # add initial tag
+class Extension(alan.core.extension.Extension):
 
-# Alias menu.insert() to i()
-i = menu.insert
+	def run(self):
+		# Initiate pipemenu
+		self.menu = struct.PipeMenu()
+		self.menu.start() # add initial tag
 
-### Begin!
+		# Alias menu.insert() to i()
+		i = self.menu.insert
 
-# We should determine which player use, but hey, currently only MPD is supported :)
-PLAYERS = (MPD,)
+		### Begin!
 
-# Process player
-for player in PLAYERS:
+		# We should determine which player use, but hey, currently only MPD is supported :)
+		PLAYERS = (MPD,)
 
-	# Declare class
-	clas = player()
+		# Process player
+		for player in PLAYERS:
 
-	if len(sys.argv) > 3:
-		# Called from an already made pipe menu
-		if clas.NAME == sys.argv[2]:
-			if sys.argv[3] == "play": clas.play()
-			if sys.argv[3] == "pause": clas.pause()
-			if sys.argv[3] == "stop": clas.stop()
-			if sys.argv[3] == "restartsong": clas.restartsong()
-			if sys.argv[3] == "prev": clas.prev()
-			if sys.argv[3] == "next": clas.next()
-		sys.exit(0)
-	
-	#######
-	# A simple ASCII mockup :D
-	#
-	# Play (If we are paused or stopped) - If we are playing, show Pause instead of Play.
-	# Stop (If we are playing or pausing)
-	# ----
-	# <Song Name> -> Click -> Restarts song
-	# <Album> -> Submenu that shows all songs in the album
-	# <Author> -> Submenu that shows all albums and then songs in them
-	# ----
-	# Previous
-	# Next
-	# ----
-	# Info
-	#######
-	
-	# Begin creating all needed objects
-	play = core.item(_("Play"), ga.execute(executable + " %s play" % clas.NAME))
-	pause = core.item(_("Pause"), ga.execute(executable + " %s pause" % clas.NAME))
-	stop = core.item(_("Stop"), ga.execute(executable + " %s stop" % clas.NAME))
-	
-	if clas.status["state"] == "stop" or not clas.song["title"]:
-		song = _("Play a random song")
-		album = False
-		author = False
-	else:
-		song = clas.song["title"]
-		#album = core.menu()
-		#print clas.song["album"]
-		try: album = core.menu("albumsub", clas.song["album"], "\n".join(clas.return_album_songs(clas.song["album"])))
-		except: album = False
-		
-		try: author = core.menu("artistsub", clas.song["artist"], "\n".join(clas.return_author_albums(clas.song["artist"])))
-		except: author = False
-	
-	song = core.item(_(song), ga.execute(executable + " %s restartsong" % clas.NAME))
-	
-	prev = core.item(_("Previous"), ga.execute(executable + " %s prev" % clas.NAME))
-	next = core.item(_("Next"), ga.execute(executable + " %s next" % clas.NAME))
-	
-	# Begin adding to menu
-	i(core.header(clas.NAME))
-	
-	if clas.status["state"] == "stop" or clas.status["state"] == "pause": i(play)
-	if clas.status["state"] == "play": i(pause)
-	if clas.status["state"] == "play" or clas.status["state"] == "pause": i(stop)
-	
-	# Separator
-	i(core.separator())
-	
-	# Song name
-	i(song)
-	if album: i(album)
-	if author: i(author)
+			# Declare class
+			clas = player()
 
-	
-	# Previus/Next
-	if clas.status["state"] in ("play", "pause"):
-		# Separator
-		i(core.separator())
-		
-		i(prev)
-		i(next)
-	
-# Display info object
-i(core.info(infos))
+			if len(sys.argv) > 3:
+				# Called from an already made pipe menu
+				if clas.NAME == sys.argv[2]:
+					if sys.argv[3] == "play": clas.play()
+					if sys.argv[3] == "pause": clas.pause()
+					if sys.argv[3] == "stop": clas.stop()
+					if sys.argv[3] == "restartsong": clas.restartsong()
+					if sys.argv[3] == "prev": clas.prev()
+					if sys.argv[3] == "next": clas.next()
+				sys.exit(0)
+			
+			#######
+			# A simple ASCII mockup :D
+			#
+			# Play (If we are paused or stopped) - If we are playing, show Pause instead of Play.
+			# Stop (If we are playing or pausing)
+			# ----
+			# <Song Name> -> Click -> Restarts song
+			# <Album> -> Submenu that shows all songs in the album
+			# <Author> -> Submenu that shows all albums and then songs in them
+			# ----
+			# Previous
+			# Next
+			# ----
+			# Info
+			#######
+			
+			# Begin creating all needed objects
+			play = core.item(_("Play"), ga.execute(executable + " %s play" % clas.NAME))
+			pause = core.item(_("Pause"), ga.execute(executable + " %s pause" % clas.NAME))
+			stop = core.item(_("Stop"), ga.execute(executable + " %s stop" % clas.NAME))
+			
+			if clas.status["state"] == "stop" or not clas.song["title"]:
+				song = _("Play a random song")
+				album = False
+				author = False
+			else:
+				song = clas.song["title"]
+				#album = core.menu()
+				#print clas.song["album"]
+				try: album = core.menu("albumsub", clas.song["album"], "\n".join(clas.return_album_songs(clas.song["album"])))
+				except: album = False
+				
+				try: author = core.menu("artistsub", clas.song["artist"], "\n".join(clas.return_author_albums(clas.song["artist"])))
+				except: author = False
+			
+			song = core.item(_(song), ga.execute(executable + " %s restartsong" % clas.NAME))
+			
+			prev = core.item(_("Previous"), ga.execute(executable + " %s prev" % clas.NAME))
+			next = core.item(_("Next"), ga.execute(executable + " %s next" % clas.NAME))
+			
+			# Begin adding to menu
+			i(core.header(clas.NAME))
+			
+			if clas.status["state"] == "stop" or clas.status["state"] == "pause": i(play)
+			if clas.status["state"] == "play": i(pause)
+			if clas.status["state"] == "play" or clas.status["state"] == "pause": i(stop)
+			
+			# Separator
+			i(core.separator)
+			
+			# Song name
+			i(song)
+			if album: i(album)
+			if author: i(author)
 
-# End
-menu.end()
+			
+			# Previus/Next
+			if clas.status["state"] in ("play", "pause"):
+				# Separator
+				i(core.separator)
+				
+				i(prev)
+				i(next)
+			
+		# Display info object
+		i(core.info(infos))
+
+		# End
+		self.menu.end()

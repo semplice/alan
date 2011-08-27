@@ -9,8 +9,21 @@ alan (0.4.0-1) UNRELEASED; urgency=low
   * alan-show-extension: add configuration support. Use ids instead of
     real extension name in command-line argument.
   * ext/*: icon support, except for music.
+  * core/: added extension library.
+  * ext/*: adapted to match the inclusion of the new alan.core.extension.
+    WARNING: THIS BREAKS ALL OLDER EXTENSIONS!
+    Your extension should now be into the class Extension (derivative
+    of alan.core.extension.Extension), definition run.
+    .
+    menu should become self.menu!
+  * ext/xdgmenu: support for configuration variable split_menu.
+    If True, the categories will be loaded when the user will
+    pass its cursor on.
+    Default is False.
+  * core/config: ConfigRead: if option value is "True" or "False",
+    return relative booleans instead of string.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 11:32:47 +0200
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 12:30:06 +0200
 
 alan (0.3.1.2-1) emily; urgency=medium
 

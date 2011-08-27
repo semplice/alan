@@ -70,7 +70,13 @@ class ConfigRead(Config):
 			section = self.module
 		
 		if self.has_option(section, opt):
-			return self.get(section, opt)
+			opt = self.get(section, opt)
+			if opt == "True":
+				return True
+			elif opt == "False":
+				return False
+			else:
+				return opt
 		else:
 			return False
 
