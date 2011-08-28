@@ -7,148 +7,148 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-12 11:21+0200\n"
+"POT-Creation-Date: 2011-08-27 12:54+0200\n"
 "PO-Revision-Date: 2011-07-04 20:06+0000\n"
 "Last-Translator: zeugma <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-08-21 05:08+0000\n"
-"X-Generator: Launchpad (build 13697)\n"
+"X-Launchpad-Export-Date: 2011-08-28 05:47+0000\n"
+"X-Generator: Launchpad (build 13794)\n"
 
-#: alan/core/objects/core.py:68
+#: alan/core/objects/core.py:87
 msgid "Info"
 msgstr "Bilgi"
 
-#: alan/ext/appearance.py:30
+#: alan/ext/appearance.py:34
 msgid "Add"
 msgstr "Ekle"
 
-#: alan/ext/appearance.py:31
+#: alan/ext/appearance.py:35
 msgid "Manage"
 msgstr "Yönet"
 
-#: alan/ext/appearance.py:32
+#: alan/ext/appearance.py:36
 msgid "Wallpaper"
 msgstr "Duvar kağıdı"
 
-#: alan/ext/appearance.py:34
+#: alan/ext/appearance.py:38
 msgid "Appearance settings"
 msgstr ""
 
-#: alan/ext/places.py:43 alan-gentree.py:25
+#: alan/ext/places.py:48 alan-gentree.py:24
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: alan/ext/places.py:46
+#: alan/ext/places.py:51
 msgid "Trash"
 msgstr "Çöp"
 
-#: alan/ext/places.py:49
+#: alan/ext/places.py:54
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: alan/ext/places.py:56
+#: alan/ext/places.py:61
 msgid "System (/)"
 msgstr ""
 
-#: alan/ext/music.py:32
+#: alan/ext/music.py:33
 msgid "Coders"
 msgstr ""
 
-#: alan/ext/music.py:162
+#: alan/ext/music.py:166
 msgid "Play"
 msgstr "Oynat"
 
-#: alan/ext/music.py:163
+#: alan/ext/music.py:167
 msgid "Pause"
 msgstr "Durdur"
 
-#: alan/ext/music.py:164
+#: alan/ext/music.py:168
 msgid "Stop"
 msgstr "Dur"
 
-#: alan/ext/music.py:167
+#: alan/ext/music.py:171
 msgid "Play a random song"
 msgstr ""
 
-#: alan/ext/music.py:182
+#: alan/ext/music.py:186
 msgid "Previous"
 msgstr ""
 
-#: alan/ext/music.py:183
+#: alan/ext/music.py:187
 msgid "Next"
 msgstr ""
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Lock Screen"
 msgstr ""
 
-#: alan/ext/logout.py:34 alan-gentree.py:25
+#: alan/ext/logout.py:39 alan-gentree.py:24
 msgid "Logout"
 msgstr "Oturumu Kapat"
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Suspend"
 msgstr ""
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Hibernate"
 msgstr ""
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Shutdown"
 msgstr ""
 
-#: alan/ext/logout.py:34
+#: alan/ext/logout.py:39
 msgid "Reboot"
 msgstr ""
 
-#: alan-show-extension.py:48
+#: alan-show-extension.py:59
 msgid "Module not found!"
 msgstr ""
 
-#: alan-show-extension.py:50
+#: alan-show-extension.py:61
 msgid "An error occurred while running the module."
 msgstr ""
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Web Browser"
 msgstr "Web Tarayıcı"
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Terminal Emulator"
 msgstr "Uçbirim Emülatörü"
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Places"
 msgstr ""
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Extensions"
 msgstr "Uzantılar"
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Music"
 msgstr "Müzik"
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "About Semplice..."
 msgstr ""
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Appearance"
 msgstr ""
 
-#: alan-gentree.py:25
+#: alan-gentree.py:24
 msgid "Install Semplice"
 msgstr ""
