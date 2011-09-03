@@ -77,7 +77,7 @@ class Extension(alan.core.extension.Extension):
 					
 					# Is on media. Yay.
 					dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
-					i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm("file://%s" % dire)), icon=icon))
+					i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm(dire)), icon=icon))
 
 		if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 			i(core.separator)

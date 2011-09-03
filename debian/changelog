@@ -1,3 +1,9 @@
+alan (0.4.0~pre2-1) UNRELEASED; urgency=low
+
+  * ext/places.py: Do not prepend file:// in bookmarks.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 03 Sep 2011 15:09:29 +0200
+
 alan (0.4.0~pre1.2-1) emily; urgency=low
 
   * Do not store a bool in ALANICONS.
