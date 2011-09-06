@@ -33,7 +33,7 @@ def error(text):
 # Load module by reading sys.argv[1]
 
 if len(sys.argv) < 2:
-	extension_not_found()
+	error(_("Module not found!"))
 	sys.exit()
 
 name = sys.argv[1]

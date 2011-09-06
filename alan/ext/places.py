@@ -23,15 +23,20 @@ ICONS = os.getenv("ALANICONS")
 
 _ = trans.translation_init("alan")
 
-def exfm(path):
-	return "pcmanfm \"%s\"" % path
-
 # Informations about extension ;)
 coders = { "Eugenio Paolantonio":"http://blog.medesimo.eu" }
 infos = {"Coders":coders}
 
 class Extension(alan.core.extension.Extension):
+	def exfm(self, filemanager, path):
+		return "%s \"%s\"" % (filemanager, path)
+	
 	def run(self):
+		
+		# Get filemanager
+		filemanager = self.cfg.printv("filemanager")
+		if not filemanager: filemanager = "pcmanfm" # Default to pcmanfm if not filemanager specified.
+		
 		# Initiate pipemenu
 		self.menu = struct.PipeMenu()
 		self.menu.start() # add initial tag
@@ -42,23 +47,23 @@ class Extension(alan.core.extension.Extension):
 		### Begin!
 
 		# Home
-		i(core.item(USER, ga.execute(exfm("file://%s" % HOME)), icon="user-home"))
+		i(core.item(USER, ga.execute(self.exfm(filemanager, "file://%s" % HOME)), icon="user-home"))
 
 		# Desktop
-		i(core.item(_("Desktop"), ga.execute(exfm("file://%s" % os.path.join(HOME,"Desktop"))), icon="user-desktop"))
+		i(core.item(_("Desktop"), ga.execute(self.exfm(filemanager, "file://%s" % os.path.join(HOME,"Desktop"))), icon="user-desktop"))
 
 		# Trash
-		i(core.item(_("Trash"), ga.execute(exfm("trash://")), icon="user-trash"))
+		i(core.item(_("Trash"), ga.execute(self.exfm(filemanager, "trash://")), icon="user-trash"))
 
 		# Computer
-		i(core.item(_("Computer"), ga.execute(exfm("computer://")), icon="computer"))
+		i(core.item(_("Computer"), ga.execute(self.exfm(filemanager, "computer://")), icon="computer"))
 
 		i(core.separator)
 
 		#### MOUNTED ITEMS
 
 		# Root (/)
-		i(core.item(_("System (/)"), ga.execute(exfm("file:///")), icon="drive-harddisk"))
+		i(core.item(_("System (/)"), ga.execute(self.exfm(filemanager, "file:///")), icon="drive-harddisk"))
 
 		with open("/proc/mounts") as mounts:
 
@@ -77,7 +82,7 @@ class Extension(alan.core.extension.Extension):
 					
 					# Is on media. Yay.
 					dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
-					i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(exfm(dire)), icon=icon))
+					i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(self.exfm(filemanager, dire)), icon=icon))
 
 		if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 			i(core.separator)
@@ -86,9 +91,9 @@ class Extension(alan.core.extension.Extension):
 			lines = _file.readlines()
 			for line in lines:
 				line = line.split(" ")
-				directory = line[0]
-				name = " ".join(line[1:]).replace("_","__")
-				i(core.item(name, ga.execute(exfm(directory)), icon="folder"))
+				directory = line[0].replace("\n","")
+				name = " ".join(line[1:]).replace("_","__").replace("\n","")
+				i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon="folder"))
 
 		# End
 		self.menu.end()

@@ -1,8 +1,12 @@
-alan (0.4.0~pre2-1) UNRELEASED; urgency=low
+alan (0.4.0~pre2-1) emily; urgency=low
 
-  * ext/places.py: Do not prepend file:// in bookmarks.
+  * ext/places.py:
+    - Do not prepend file:// in bookmarks;
+    - Drop \n when reading from bookmarks;
+    - Moved exfm into Extension class;
+    - Support for 'filemanager' option in configuration file.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 03 Sep 2011 15:09:29 +0200
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 06 Sep 2011 19:53:05 +0200
 
 alan (0.4.0~pre1.2-1) emily; urgency=low
 
