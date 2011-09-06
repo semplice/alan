@@ -92,7 +92,10 @@ class Extension(alan.core.extension.Extension):
 			for line in lines:
 				line = line.split(" ")
 				directory = line[0].replace("\n","")
-				name = " ".join(line[1:]).replace("_","__").replace("\n","")
+				if len(line) > 1:
+					name = " ".join(line[1:]).replace("_","__").replace("\n","")
+				else:
+					name = os.path.basename(directory.replace("file://","")).replace("_","__").replace("\n","")
 				i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon="folder"))
 
 		# End
