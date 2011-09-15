@@ -65,24 +65,24 @@ class Extension(alan.core.extension.Extension):
 		def walk_menu(entry):
 			if entry.get_type() == gmenu.TYPE_DIRECTORY and split and ids or entry.get_type() == gmenu.TYPE_DIRECTORY and not split:
 				obj = "\n".join(map(walk_menu, entry.get_contents()))
-				return core.menu(escape(entry.menu_id), escape(entry.get_name()), obj, icon=entry.get_icon())
+				return core.menu(escape(entry.menu_id), escape(entry.name.replace("&","and")), obj, icon=entry.icon)
 			elif entry.get_type() == gmenu.TYPE_DIRECTORY and split:
 				if entry.menu_id in ("Administration","Preferences"):
 					_id = "sett %s" % entry.menu_id
 				else:
 					_id = entry.menu_id
 				
-				return core.pipemenu(escape(entry.menu_id), escape(entry.get_name()), "alan-show-extension %s %s" % (sys.argv[1], _id), icon=entry.get_icon())
+				return core.pipemenu(escape(entry.menu_id), escape(entry.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], _id), icon=entry.icon)
 			elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
 				command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
 				if entry.launch_in_terminal:
 					command = 'xterm -title "%s" -e %s' % \
-						(entry.get_name(), command)
+						(entry.name.replace("&","and"), command)
 				
 				# New action
 				act = ga.execute(escape(command))
 				# Incorporate action in item
-				item = core.item(escape(entry.get_name()), act, icon=entry.get_icon())
+				item = core.item(escape(entry.name.replace("&","and")), act, icon=entry.icon)
 				
 				return item
 

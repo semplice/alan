@@ -1,8 +1,11 @@
-alan (0.4.0~pre3-1) UNRELEASED; urgency=low
+alan (0.4.0~pre3-1) emily; urgency=low
 
   * ext/places.py: Use directory basename if not name is specified.
+  * ext/xdgmenu.py: Fixed some rendering issues
+  * ext/logout.py: updated to semplice-logout 1.13.0; added Settings
+    option.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 06 Sep 2011 23:44:19 +0200
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 15 Sep 2011 23:12:14 +0200
 
 alan (0.4.0~pre2-1) emily; urgency=low
 
