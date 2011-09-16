@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-27 12:54+0200\n"
+"POT-Creation-Date: 2011-09-15 23:13+0200\n"
 "PO-Revision-Date: 2011-07-04 20:06+0000\n"
 "Last-Translator: zeugma <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-09-11 05:01+0000\n"
-"X-Generator: Launchpad (build 13900)\n"
+"X-Launchpad-Export-Date: 2011-09-16 05:05+0000\n"
+"X-Generator: Launchpad (build 13955)\n"
 
 #: alan/core/objects/core.py:87
 msgid "Info"
@@ -37,19 +37,19 @@ msgstr "Duvar kağıdı"
 msgid "Appearance settings"
 msgstr ""
 
-#: alan/ext/places.py:48 alan-gentree.py:24
+#: alan/ext/places.py:53 alan-gentree.py:24
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: alan/ext/places.py:51
+#: alan/ext/places.py:56
 msgid "Trash"
 msgstr "Çöp"
 
-#: alan/ext/places.py:54
+#: alan/ext/places.py:59
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: alan/ext/places.py:61
+#: alan/ext/places.py:66
 msgid "System (/)"
 msgstr ""
 
@@ -81,35 +81,39 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Lock Screen"
 msgstr ""
 
-#: alan/ext/logout.py:39 alan-gentree.py:24
+#: alan/ext/logout.py:44 alan-gentree.py:24
 msgid "Logout"
 msgstr "Oturumu Kapat"
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Suspend"
 msgstr ""
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Hibernate"
 msgstr ""
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Shutdown"
 msgstr ""
 
-#: alan/ext/logout.py:39
+#: alan/ext/logout.py:44
 msgid "Reboot"
 msgstr ""
 
-#: alan-show-extension.py:59
+#: alan/ext/logout.py:77
+msgid "Settings..."
+msgstr ""
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
 msgid "Module not found!"
 msgstr ""
 
