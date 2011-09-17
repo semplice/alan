@@ -1,3 +1,11 @@
+alan (0.4.0~pre4.1-1) emily; urgency=low
+
+  * core/config.py: support for "None" value; lower item
+                    to check for "true","false","none" in
+                    order to support more syntaxes.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 17 Sep 2011 17:00:25 +0200
+
 alan (0.4.0~pre4-1) emily; urgency=low
 
   * ext/logout.py: Handle 'None' action; "(CTRL+ALT+SPACE)"

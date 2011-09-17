@@ -71,10 +71,12 @@ class ConfigRead(Config):
 		
 		if self.has_option(section, opt):
 			opt = self.get(section, opt)
-			if opt == "True":
+			if opt.lower() == "true":
 				return True
-			elif opt == "False":
+			elif opt.lower() == "false":
 				return False
+			elif opt.lower() == "none":
+				return None
 			else:
 				return opt
 		else:
