@@ -55,12 +55,13 @@ class Extension(alan.core.extension.Extension):
 			
 			# Get last choice
 			last = cfg.get("Last","last_action")
+			if not last: last = False
 		else:
 			last = False
 
 		# Add that choice!
 		if last:
-			choice = actions[last] + " (CTRL+ALT+SPACE)"
+			choice = actions[last] + _(" (CTRL+ALT+SPACE)")
 			i(core.item(choice, ga.execute(ections[last]), icon=ictions[last]))
 			i(core.separator)
 
