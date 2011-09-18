@@ -1,3 +1,9 @@
+alan (0.4.0~pre4.2-1) emily; urgency=low
+
+  * ext/logout.py: fixed none handling.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 18 Sep 2011 11:13:25 +0200
+
 alan (0.4.0~pre4.1-1) emily; urgency=low
 
   * core/config.py: support for "None" value; lower item

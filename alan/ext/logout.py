@@ -55,7 +55,7 @@ class Extension(alan.core.extension.Extension):
 			
 			# Get last choice
 			last = cfg.get("Last","last_action")
-			if not last: last = False
+			if last.lower() == "none": last = False
 		else:
 			last = False
 
