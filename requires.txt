@@ -3,7 +3,6 @@ commands
 gettext
 gmenu
 locale
-mpd
 os
 sys
 re

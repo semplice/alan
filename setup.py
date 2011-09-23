@@ -15,5 +15,5 @@ setup(name='alan',
       scripts=['alan-gentree.py', 'alan-show-extension.py'],
       packages=['alan', 'alan.core', 'alan.core.actions', 'alan.core.objects', 'alan.ext'],
       data_files=[("/etc/alan", ["tree.conf"])],
-      requires=['ConfigParser', 'commands', 'gettext', 'gmenu', 'locale', 'mpd', 'os', 'sys', 're', 'shutil', 'xml.sax.saxutils', 't9n.library'],
+      requires=['ConfigParser', 'commands', 'gettext', 'gmenu', 'locale', 'os', 'sys', 're', 'shutil', 'xml.sax.saxutils', 't9n.library'],
      )

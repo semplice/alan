@@ -1,3 +1,10 @@
+alan (0.4.0~pre4.2-1.1) emily; urgency=low
+
+  * Added Exaile plugin. 
+  * Moved music.py to music_old.py
+
+ -- Luca B. <sidtux@gmail.com>  Fri, 23 Sep 2011 22:18:31 +0200
+
 alan (0.4.0~pre4.2-1) emily; urgency=low
 
   * ext/logout.py: fixed none handling.
