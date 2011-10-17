@@ -1,3 +1,10 @@
+alan (0.4.0~pre5.1-1) emily; urgency=low
+
+  * ext/xdgmenu.py: fixed compatibility issues with gnome-menus 3.x.
+  * ext/exaile.py: made extension id-independent.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 17 Oct 2011 17:46:29 +0200
+
 alan (0.4.0~pre5-1) emily; urgency=low
 
   * Added Exaile plugin. 

@@ -52,16 +52,16 @@ class Extension(alan.core.extension.Extension):
             self.iface = dbus.Interface(self.remote_object, "org.exaile.Exaile")
 
             if self.iface.GetState() == "playing":
-                i(core.item(_("Pause"), ga.execute("alan-show-extension exaile playpause"), icon="media-playback-pause"))
+                i(core.item(_("Pause"), ga.execute("alan-show-extension %s playpause" % sys.argv[1]), icon="media-playback-pause"))
             else:
-                i(core.item(_("Play"), ga.execute("alan-show-extension exaile playpause"), icon="media-playback-start"))
+                i(core.item(_("Play"), ga.execute("alan-show-extension %s playpause" % sys.argv[1]), icon="media-playback-start"))
                 
-            i(core.item(_("Stop"), ga.execute("alan-show-extension exaile stop"), icon="media-playback-stop"))
+            i(core.item(_("Stop"), ga.execute("alan-show-extension %s stop" % sys.argv[1]), icon="media-playback-stop"))
     
             i(core.separator)
     
-            i(core.item(_("Previous"), ga.execute("alan-show-extension exaile prev"), icon="media-skip-backward"))
-            i(core.item(_("Next"), ga.execute("alan-show-extension exaile next"), icon="media-skip-forward"))
+            i(core.item(_("Previous"), ga.execute("alan-show-extension %s prev" % sys.argv[1]), icon="media-skip-backward"))
+            i(core.item(_("Next"), ga.execute("alan-show-extension %s next" % sys.argv[1]), icon="media-skip-forward"))
             
             i(core.separator)
             # Displays infos about the current song
