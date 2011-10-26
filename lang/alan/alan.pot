@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-16 18:53+0200\n"
+"POT-Creation-Date: 2011-10-26 19:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,34 @@ msgstr ""
 msgid "Appearance settings"
 msgstr ""
 
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr ""
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr ""
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr ""
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr ""
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr ""
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr ""
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr ""
+
 #: alan/ext/places.py:53 alan-gentree.py:24
 msgid "Desktop"
 msgstr ""
@@ -53,32 +81,21 @@ msgstr ""
 msgid "System (/)"
 msgstr ""
 
-#: alan/ext/music.py:33
-msgid "Coders"
+#: alan/ext/exaile.py:48
+msgid "Exaile"
 msgstr ""
 
-#: alan/ext/music.py:166
-msgid "Play"
+#: alan/ext/exaile.py:70 alan/ext/exaile.py:71
+#, python-format
+msgid "%s"
 msgstr ""
 
-#: alan/ext/music.py:167
-msgid "Pause"
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
 msgstr ""
 
-#: alan/ext/music.py:168
-msgid "Stop"
-msgstr ""
-
-#: alan/ext/music.py:171
-msgid "Play a random song"
-msgstr ""
-
-#: alan/ext/music.py:186
-msgid "Previous"
-msgstr ""
-
-#: alan/ext/music.py:187
-msgid "Next"
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
 msgstr ""
 
 #: alan/ext/logout.py:44

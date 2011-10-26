@@ -1,3 +1,9 @@
+alan (0.4.0~pre5.2-1) emily; urgency=low
+
+  * Added german translations, kudos to Ikem Krueger (closes LP: #877814)
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 26 Oct 2011 19:48:43 +0200
+
 alan (0.4.0~pre5.1-1) emily; urgency=low
 
   * ext/xdgmenu.py: fixed compatibility issues with gnome-menus 3.x.
