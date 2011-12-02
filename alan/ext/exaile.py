@@ -45,7 +45,7 @@ class Extension(alan.core.extension.Extension):
         
         i = self.menu.insert
         
-        i(core.header("Exaile")
+        i(core.header("Exaile"))
             
         try:
             self.remote_object = bus.get_object("org.exaile.Exaile","/org/exaile/Exaile")

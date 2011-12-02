@@ -1,3 +1,9 @@
+alan (0.4.0~pre5.3-1) emily; urgency=low
+
+  * ext/exaile.py: fixed typo.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 02 Dec 2011 22:11:40 +0100
+
 alan (0.4.0~pre5.2-1) emily; urgency=low
 
   * Added german translations, kudos to Ikem Krueger (closes LP: #877814)
