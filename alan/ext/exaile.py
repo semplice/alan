@@ -45,7 +45,7 @@ class Extension(alan.core.extension.Extension):
         
         i = self.menu.insert
         
-        i(core.header(_("Exaile")))
+        i(core.header("Exaile")
             
         try:
             self.remote_object = bus.get_object("org.exaile.Exaile","/org/exaile/Exaile")
@@ -67,8 +67,8 @@ class Extension(alan.core.extension.Extension):
             # Displays infos about the current song
             if(self.iface.IsPlaying()):
                 i(core.item(self.iface.GetTrackAttr("title"), ga.execute(""), icon="audio-x-generic"))
-                i(core.item(_("%s" % (self.iface.GetTrackAttr("album"))), ga.execute(""), icon="media-optical"))
-                i(core.item(_("%s" % (self.iface.GetTrackAttr("artist"))), ga.execute(""), icon="audio-input-microphone"))
+                i(core.item(self.iface.GetTrackAttr("album"), ga.execute(""), icon="media-optical"))
+                i(core.item(self.iface.GetTrackAttr("artist"), ga.execute(""), icon="audio-input-microphone"))
             else:
                 #i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="/usr/share/pixmaps/exaile.png"))
                 i(core.item(_("Exaile is not playing."), ga.execute(""), icon=""))

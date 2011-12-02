@@ -1,0 +1,162 @@
+# German translation for alan
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the alan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alan\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-09-16 18:53+0200\n"
+"PO-Revision-Date: 2011-10-25 12:16+0000\n"
+"Last-Translator: Ikem Krueger <ikem.krueger@googlemail.com>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-10-25 03:56+0000\n"
+"X-Generator: Launchpad (build 14185)\n"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Info"
+
+#: alan/ext/appearance.py:34
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: alan/ext/appearance.py:35
+msgid "Manage"
+msgstr "Manage"
+
+#: alan/ext/appearance.py:36
+msgid "Wallpaper"
+msgstr "Hintergrundbild"
+
+#: alan/ext/appearance.py:38
+msgid "Appearance settings"
+msgstr ""
+
+#: alan/ext/places.py:53 alan-gentree.py:24
+msgid "Desktop"
+msgstr "Desktop"
+
+#: alan/ext/places.py:56
+msgid "Trash"
+msgstr "Papierkorb"
+
+#: alan/ext/places.py:59
+msgid "Computer"
+msgstr "Computer"
+
+#: alan/ext/places.py:66
+msgid "System (/)"
+msgstr "System (/)"
+
+#: alan/ext/music.py:33
+msgid "Coders"
+msgstr ""
+
+#: alan/ext/music.py:166
+msgid "Play"
+msgstr "Wiedergabe"
+
+#: alan/ext/music.py:167
+msgid "Pause"
+msgstr "Pause"
+
+#: alan/ext/music.py:168
+msgid "Stop"
+msgstr "Stop"
+
+#: alan/ext/music.py:171
+msgid "Play a random song"
+msgstr ""
+
+#: alan/ext/music.py:186
+msgid "Previous"
+msgstr ""
+
+#: alan/ext/music.py:187
+msgid "Next"
+msgstr ""
+
+#: alan/ext/logout.py:44
+msgid "Lock Screen"
+msgstr "Bildschirm sperren"
+
+#: alan/ext/logout.py:44 alan-gentree.py:24
+msgid "Logout"
+msgstr "Abmelden"
+
+#: alan/ext/logout.py:44
+msgid "Switch User"
+msgstr "Benutzer wechseln"
+
+#: alan/ext/logout.py:44
+msgid "Suspend"
+msgstr "Bereitschaft"
+
+#: alan/ext/logout.py:44
+msgid "Hibernate"
+msgstr "Ruhezustand"
+
+#: alan/ext/logout.py:44
+msgid "Shutdown"
+msgstr "Ausschalten"
+
+#: alan/ext/logout.py:44
+msgid "Reboot"
+msgstr "Neu starten"
+
+#: alan/ext/logout.py:64
+msgid " (CTRL+ALT+SPACE)"
+msgstr " (STRG+ALT+LEERTASTE)"
+
+#: alan/ext/logout.py:78
+msgid "Settings..."
+msgstr "Einstellungen..."
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr ""
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr ""
+
+#: alan-gentree.py:24
+msgid "Web Browser"
+msgstr "Web-Browser"
+
+#: alan-gentree.py:24
+msgid "Terminal Emulator"
+msgstr "Terminal-Emulator"
+
+#: alan-gentree.py:24
+msgid "Applications"
+msgstr ""
+
+#: alan-gentree.py:24
+msgid "Places"
+msgstr "Orte"
+
+#: alan-gentree.py:24
+msgid "Extensions"
+msgstr "Erweiterungen"
+
+#: alan-gentree.py:24
+msgid "Music"
+msgstr "Musik"
+
+#: alan-gentree.py:24
+msgid "About Semplice..."
+msgstr "Über Semplice..."
+
+#: alan-gentree.py:24
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#: alan-gentree.py:24
+msgid "Install Semplice"
+msgstr "Semplice installieren"
