@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-26 19:48+0200\n"
+"POT-Creation-Date: 2011-12-02 20:00+0100\n"
 "PO-Revision-Date: 2011-07-04 20:06+0000\n"
 "Last-Translator: zeugma <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-10-28 06:01+0000\n"
-"X-Generator: Launchpad (build 14197)\n"
+"X-Launchpad-Export-Date: 2011-12-03 05:51+0000\n"
+"X-Generator: Launchpad (build 14418)\n"
 
 #: alan/core/objects/core.py:87
 msgid "Info"
@@ -79,15 +79,6 @@ msgstr "Bilgisayar"
 
 #: alan/ext/places.py:66
 msgid "System (/)"
-msgstr ""
-
-#: alan/ext/exaile.py:48
-msgid "Exaile"
-msgstr ""
-
-#: alan/ext/exaile.py:70 alan/ext/exaile.py:71
-#, python-format
-msgid "%s"
 msgstr ""
 
 #: alan/ext/exaile.py:74
