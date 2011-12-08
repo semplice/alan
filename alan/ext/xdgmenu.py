@@ -116,7 +116,7 @@ class Extension(alan.core.extension.Extension):
 		i("\n".join(map(walk_menu, gmenu.lookup_tree(applications_menu).get_directory_from_path(path).get_contents())))
 
 		#### SYSTEM SETTINGS
-		if not ids and not hide_settings_menu:
+		if not ids and not hide_settings_menus:
 			i(core.separator)
 
 			# Prefs
