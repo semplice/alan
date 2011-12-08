@@ -49,11 +49,26 @@ class Extension(alan.core.extension.Extension):
 
 		# Get split_menu
 		split = self.cfg.printv("split_menu")
+		
+		# Get hide_settings_menus
+		hide_settings_menus = self.cfg.printv("hide_settings_menus")
 
 		if split:
 			# Should edit menu?
 			if len(sys.argv) > 2:
 					ids = " ".join(sys.argv[2:])
+		
+		if hide_settings_menus:
+			# Should hide menus?
+			to_skip = ()
+		else:
+			to_skip = ("Administration", "Preferences")
+
+		# Lookup menu file
+		if os.path.exists("/etc/xdg/menus/gnome-applications.menu"):
+			applications_menu = "gnome-applications.menu"
+		else:
+			applications_menu = "applications.menu" # Force to applications.menu, may fail if not existent, of course.
 
 		def walk_menu_system(entry):
 			return walk_menu(entry, is_system=True)
@@ -61,7 +76,7 @@ class Extension(alan.core.extension.Extension):
 		def walk_menu(entry, is_system=False):
 			if entry.get_type() == gmenu.TYPE_DIRECTORY and split and ids or entry.get_type() == gmenu.TYPE_DIRECTORY and not split:
 								
-				if not entry.menu_id in ("Administration","Preferences"):
+				if not entry.menu_id in to_skip:
 					obj = "\n".join(map(walk_menu, entry.get_contents()))
 				elif is_system:
 					obj = "\n".join(map(walk_menu_system, entry.get_contents()))
@@ -70,7 +85,7 @@ class Extension(alan.core.extension.Extension):
 				
 				return core.menu(escape(entry.menu_id), escape(entry.name.replace("&","and")), obj, icon=entry.icon)
 			elif entry.get_type() == gmenu.TYPE_DIRECTORY and split:
-				if not entry.menu_id in ("Administration","Preferences"):
+				if not entry.menu_id in to_skip:
 					return core.pipemenu(escape(entry.menu_id), escape(entry.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], entry.menu_id), icon=entry.icon)
 			elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
 				command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
@@ -98,14 +113,14 @@ class Extension(alan.core.extension.Extension):
 			path = "/" + ids
 		else:
 			path = "/"
-		i("\n".join(map(walk_menu, gmenu.lookup_tree("gnome-applications.menu").get_directory_from_path(path).get_contents())))
+		i("\n".join(map(walk_menu, gmenu.lookup_tree(applications_menu).get_directory_from_path(path).get_contents())))
 
 		#### SYSTEM SETTINGS
-		if not ids:
+		if not ids and not hide_settings_menu:
 			i(core.separator)
 
 			# Prefs
-			prefs = gmenu.lookup_tree("gnome-applications.menu").get_directory_from_path("/System/Preferences")
+			prefs = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Preferences")
 			if not split:
 				prefs_items = "\n".join(map(walk_menu_system, prefs.get_contents()))
 				i(core.menu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), prefs_items, icon=prefs.icon))
@@ -113,7 +128,7 @@ class Extension(alan.core.extension.Extension):
 				i(core.pipemenu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], "System/Preferences"), icon=prefs.icon))
 			
 			# Admin
-			admin = gmenu.lookup_tree("gnome-applications.menu").get_directory_from_path("/System/Administration")
+			admin = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Administration")
 			if not split:
 				admin_items = "\n".join(map(walk_menu_system, admin.get_contents()))
 				i(core.menu(escape(admin.menu_id), escape(admin.name.replace("&","and")), admin_items, icon=admin.icon))
