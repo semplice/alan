@@ -1,10 +1,10 @@
-alan (0.4.0~pre6-2) emily; urgency=low
+alan (0.4.0-1) emily; urgency=low
 
   * ext/xdgmenu.py: fallback to applications.menu if not gnome-applications.menu;
     New setting hide_settings_menu that hides the Preferences and Administration
     menus.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 08 Dec 2011 21:53:50 +0100
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 10 Dec 2011 16:42:54 +0100
 
 alan (0.4.0~pre5.3-1) emily; urgency=low
 
