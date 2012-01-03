@@ -2,8 +2,10 @@ alan (0.5.0~pre1-1) pulse; urgency=low
 
   * alan-gentree: indentation on defs on parsename. Easier to add new entries.
   * tree.conf: added Help submenu, added xchat to the applist.
+  * alan-gentree: added support for changing the main header.
+  * tree.conf: documentation for changing header.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 03 Jan 2012 14:53:48 +0100
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 03 Jan 2012 18:03:34 +0100
 
 alan (0.4.1-1) pulse; urgency=low
 

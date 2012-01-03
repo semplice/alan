@@ -46,7 +46,50 @@ def parsename(name):
 		return defs[name]
 	else:
 		return name
+
+def parseheader(name):
+	""" Parses name. """
 	
+	name = name.split(" ")
+	final = []
+	
+	for item in name:
+		if item == "__username__":
+			final.append(os.getenv("USER"))
+		elif item == "__hostname__":
+			with open("/etc/hostname") as f:
+				final.append(f.readline().replace("\n",""))
+		elif item == "__day__":
+			pass
+		elif item == "__month__":
+			pass
+		elif item == "__year__":
+			pass
+		elif item == "__hour__":
+			pass
+		elif item == "__minutes__":
+			pass
+		elif item == "__seconds__":
+			pass
+		elif item == "__semplicerelease__":
+			with open("/etc/semplice_version") as f:
+				final.append(f.readline().replace("\n",""))
+		elif item == "__semplicebuild__":
+			if os.path.exists("/etc/semplice-build"):
+				_file = "/etc/semplice-build"
+			elif os.path.exists("/etc/semplice64-build"):
+				_file = "/etc/semplice64-build"
+			else:
+				final.append("0") # unknown.
+				continue
+
+			with open("/etc/semplice-build") as f:
+				final.append(f.readline().replace("\n",""))
+		else:
+			final.append(item)
+	
+	return " ".join(final)
+		
 
 USER = os.getenv("USER")
 PWD = os.getenv("PWD")
@@ -70,6 +113,10 @@ categories = conf.printv("categories","Alan").split(" ")
 icons = conf.printv("enable_icons","Alan")
 if icons: os.environ["ALANICONS"] = "True"
 
+# What's the header?
+head = conf.printv("header", "Alan")
+if head == False: head = "__username__"
+
 # Load objects now
 import alan.core.objects.core as core
 import alan.core.actions.glob as ga
@@ -82,7 +129,7 @@ menu.start()
 i = menu.insert
 
 # Header
-i(core.header(USER))
+i(core.header(parseheader(head)))
 
 # Begin creating menu
 for cat in categories:

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-02 20:00+0100\n"
+"POT-Creation-Date: 2012-01-03 18:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: alan/ext/places.py:53 alan-gentree.py:24
+#: alan/ext/places.py:53 alan-gentree.py:30
 msgid "Desktop"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Lock Screen"
 msgstr ""
 
-#: alan/ext/logout.py:44 alan-gentree.py:24
+#: alan/ext/logout.py:44 alan-gentree.py:31
 msgid "Logout"
 msgstr ""
 
@@ -133,38 +133,66 @@ msgstr ""
 msgid "An error occurred while running the module."
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:25
 msgid "Web Browser"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:26
 msgid "Terminal Emulator"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:27
+msgid "IRC Chat"
+msgstr ""
+
+#: alan-gentree.py:28
 msgid "Applications"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:29
 msgid "Places"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:32
 msgid "Extensions"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:33
 msgid "Music"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:34
+msgid "Help"
+msgstr ""
+
+#: alan-gentree.py:35
 msgid "About Semplice..."
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:36
+msgid "Support"
+msgstr ""
+
+#: alan-gentree.py:37
+msgid "Semplice Website"
+msgstr ""
+
+#: alan-gentree.py:38
+msgid "Semplice Wiki"
+msgstr ""
+
+#: alan-gentree.py:39
+msgid "Semplice Forums"
+msgstr ""
+
+#: alan-gentree.py:40
+msgid "Semplice on IRC"
+msgstr ""
+
+#: alan-gentree.py:41
 msgid "Appearance"
 msgstr ""
 
-#: alan-gentree.py:24
+#: alan-gentree.py:42
 msgid "Install Semplice"
 msgstr ""
