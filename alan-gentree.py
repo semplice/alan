@@ -21,7 +21,26 @@ _ = trans.translation_init("alan")
 def parsename(name):
 	""" Returns the appropiate name from STOCK_* """
 	
-	defs = {"STOCK_NULL":"", "STOCK_WEB_BROWSER":_("Web Browser"), "STOCK_TERMINAL_EMULATOR":_("Terminal Emulator"), "STOCK_APPLICATIONS":_("Applications"), "STOCK_PLACES":_("Places"), "STOCK_DESKTOP":_("Desktop"), "STOCK_LOGOUT":_("Logout"), "STOCK_EXTENSIONS":_("Extensions"), "STOCK_MUSIC":_("Music"), "STOCK_ABOUT_SEMPLICE":_("About Semplice..."), "STOCK_APPAERANCE":_("Appearance"), "STOCK_INSTALL_SEMPLICE":_("Install Semplice")}
+	defs = {"STOCK_NULL":"",
+	"STOCK_WEB_BROWSER":_("Web Browser"),
+	"STOCK_TERMINAL_EMULATOR":_("Terminal Emulator"),
+	"STOCK_IRC_CHAT":_("IRC Chat"),
+	"STOCK_APPLICATIONS":_("Applications"),
+	"STOCK_PLACES":_("Places"),
+	"STOCK_DESKTOP":_("Desktop"),
+	"STOCK_LOGOUT":_("Logout"),
+	"STOCK_EXTENSIONS":_("Extensions"),
+	"STOCK_MUSIC":_("Music"),
+	"STOCK_HELP":_("Help"),
+	"STOCK_ABOUT_SEMPLICE":_("About Semplice..."),
+	"STOCK_SEMPLICE_SUPPORT":_("Support"),
+	"STOCK_SEMPLICE_WEBSITE":_("Semplice Website"),
+	"STOCK_SEMPLICE_WIKI":_("Semplice Wiki"),
+	"STOCK_SEMPLICE_FORUMS":_("Semplice Forums"),
+	"STOCK_SEMPLICE_IRC":_("Semplice on IRC"),
+	"STOCK_APPAERANCE":_("Appearance"),
+	"STOCK_INSTALL_SEMPLICE":_("Install Semplice"),
+	}
 	
 	if name in defs:
 		return defs[name]
