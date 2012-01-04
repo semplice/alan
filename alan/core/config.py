@@ -17,6 +17,7 @@ class Config:
 		
 		self.path = file
 		self.initial = initial
+		self.is_fork = False
 		if not initial:
 			if not os.path.exists(self.path):
 				raise Exception(self.path + " does not exist!")
@@ -25,6 +26,58 @@ class Config:
 		self.config = cparser.SafeConfigParser()
 		if not initial:
 			self.config.read(self.path)
+
+		# Should check if it is a fork
+		if not initial:
+			if self.has_section("Alan:extends"):
+				# The fork section is there...
+				if self.has_option("Alan:extends","source"):
+					# Ok, the source option is there. We should get it and load the source configuration file, too.
+					self.source = str(self.get("Alan:extends","source"))
+					
+					# Yes! this is a fork
+					self.is_fork = True
+					
+					# Load source
+					self.config.read(self.source)
+					self.config.read(self.path) # Read again the fork.
+
+	def _diff_original_changed(self, original, changed):
+		""" Returns a list of changed values into the 'changed' object. (INTERNAL) """
+
+		orig_sections = original.sections() # get all sections of original.
+		chan_sections = changed.sections() # get all sections of changed.
+		
+		changed_options = []
+		added_sections = []
+		
+		for sect in chan_sections:
+			# Check if sect exists on original...
+			if original.has_section(sect):
+				# Original has the section
+				chan_options = changed.options(sect) # get all options
+				for opt in chan_options:
+					if original.has_option(sect, opt):
+						# original has option, check if it is changed...
+						if changed.get(sect, opt) != original.get(sect, opt):
+							# Something has changed...
+							changed_options.append((sect, opt, changed.get(sect, opt)))
+					else:
+						# Option not found in original, so we should add it.
+						changed_options.append((sect, opt, changed.get(sect, opt)))
+			else:
+				# Section not found in original, we should add that + all options...
+				added_sections.append(sect)
+				for opt in changed.options(sect):
+					changed_options.append((sect, opt, changed.get(sect, opt)))
+		
+		# We should check all options and see if the section of them is into the *original fork file*
+		#for opt in changed_options:
+		#	if not original_fork.has_section(opt[0]):
+		#		# We should add it to added_sections
+		#		added_sections.append(opt[0])
+		
+		return added_sections, changed_options
 	
 	def has_section(self, section):
 		""" This function will check if section 'section' is present into the config file. """
@@ -48,8 +101,48 @@ class Config:
 	
 	def commit(self):
 		""" Write changes to the config file. """
-		with open(self.path,"w") as configfile:
-			self.config.write(configfile)
+		# Currently disable commit if this is a fork
+		if not self.is_fork:
+			with open(self.path,"w") as configfile:
+				self.config.write(configfile)
+		else:
+			# We should write only the changed things.
+
+			# We should load again a clean source + fork and then make a diff...
+			# Load source
+			self.diff_config_source = cparser.SafeConfigParser()
+			self.diff_config_source.read(self.source)
+			
+			# Load fork
+			self.diff_config_source.read(self.path)
+			
+			# diff
+			sect, opts = self._diff_original_changed(self.diff_config_source, self.config)
+									
+			if opts:
+				# There are some new options, so we can continue...
+				
+				# Load again the fork, but not merge it.
+				self.to_write = cparser.SafeConfigParser()
+				self.to_write.read(self.path)
+				
+				# First add sections...
+				if sect:
+					# If we should add sections, add them now.
+					for s in sect:
+						self.to_write.add_section(s)
+				
+				# Now add options...
+				for o in opts:
+					# If section does not exists, add it now.
+					if not self.to_write.has_section(o[0]):
+						self.to_write.add_section(o[0])
+					self.to_write.set(o[0], o[1], o[2])
+				
+				# Now really write...
+				with open(self.path,"w") as configfile:
+					self.to_write.write(configfile)
+
 	
 	def __del__(self):
 		""" Cleanup """
