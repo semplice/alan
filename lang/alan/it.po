@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-12-02 20:00+0100\n"
-"PO-Revision-Date: 2011-12-02 18:52+0000\n"
+"POT-Creation-Date: 2012-01-03 18:03+0100\n"
+"PO-Revision-Date: 2012-01-03 17:21+0000\n"
 "Last-Translator: Eugenio Paolantonio <me@medesimo.eu>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-16 07:22+0000\n"
-"X-Generator: Launchpad (build 14523)\n"
+"X-Launchpad-Export-Date: 2012-01-04 05:23+0000\n"
+"X-Generator: Launchpad (build 14616)\n"
 
 #: alan/core/objects/core.py:87
 msgid "Info"
@@ -65,7 +65,7 @@ msgstr "Precedente"
 msgid "Next"
 msgstr "Successivo"
 
-#: alan/ext/places.py:53 alan-gentree.py:24
+#: alan/ext/places.py:53 alan-gentree.py:30
 msgid "Desktop"
 msgstr "Scrivania"
 
@@ -93,7 +93,7 @@ msgstr "Apri Exaile"
 msgid "Lock Screen"
 msgstr "Blocca schermo"
 
-#: alan/ext/logout.py:44 alan-gentree.py:24
+#: alan/ext/logout.py:44 alan-gentree.py:31
 msgid "Logout"
 msgstr "Chiudi sessione"
 
@@ -133,38 +133,66 @@ msgstr "Modulo non trovato!"
 msgid "An error occurred while running the module."
 msgstr "Si è verificato un errore durante l'esecuzione del modulo."
 
-#: alan-gentree.py:24
+#: alan-gentree.py:25
 msgid "Web Browser"
 msgstr "Browser Web"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:26
 msgid "Terminal Emulator"
 msgstr "Terminale"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:27
+msgid "IRC Chat"
+msgstr "Chat IRC"
+
+#: alan-gentree.py:28
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:29
 msgid "Places"
 msgstr "Risorse"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:32
 msgid "Extensions"
 msgstr "Estensioni"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:33
 msgid "Music"
 msgstr "Musica"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:34
+msgid "Help"
+msgstr "Aiuto"
+
+#: alan-gentree.py:35
 msgid "About Semplice..."
 msgstr "Su Semplice..."
 
-#: alan-gentree.py:24
+#: alan-gentree.py:36
+msgid "Support"
+msgstr "Supporto"
+
+#: alan-gentree.py:37
+msgid "Semplice Website"
+msgstr "Sito web di Semplice"
+
+#: alan-gentree.py:38
+msgid "Semplice Wiki"
+msgstr "Wiki di Semplice"
+
+#: alan-gentree.py:39
+msgid "Semplice Forums"
+msgstr "Forum di Semplice"
+
+#: alan-gentree.py:40
+msgid "Semplice on IRC"
+msgstr "Semplice su IRC"
+
+#: alan-gentree.py:41
 msgid "Appearance"
 msgstr "Aspetto"
 
-#: alan-gentree.py:24
+#: alan-gentree.py:42
 msgid "Install Semplice"
 msgstr "Installa Semplice"
