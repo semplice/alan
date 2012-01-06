@@ -1,12 +1,16 @@
-alan (0.5.0~pre1-1) pulse; urgency=low
+alan (0.5.0-1) pulse; urgency=low
 
   * alan-gentree: indentation on defs on parsename. Easier to add new entries.
   * tree.conf: added Help submenu, added xchat to the applist.
   * alan-gentree: added support for changing the main header.
   * tree.conf: documentation for changing header.
   * core/config.py: ported fork support from pylaivng.
+  * core/: added hashme, taken from pylaivng.
+  * core/structure.py: cache support.
+  * alan-gentree, modules/* (!exaile): cache support.
+  * tree.conf: use_cache by default.
 
- -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 04 Jan 2012 17:00:00 +0100
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 06 Jan 2012 15:47:23 +0100
 
 alan (0.4.1-1) pulse; urgency=low
 

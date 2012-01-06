@@ -10,6 +10,8 @@ import alan.core.structure as struct
 import alan.core.objects.core as core
 import alan.core.actions.glob as ga
 
+import os
+
 import alan.core.extension
 
 import t9n.library as trans
@@ -23,22 +25,25 @@ infos = {"Coders":coders}
 class Extension(alan.core.extension.Extension):
 	def run(self):
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu()
-		self.menu.start() # add initial tag
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="appearance", cache_trigger=(self.cfg.path,), cache_path=os.path.dirname(self.cfg.path))
+		if self.menu.cache_check():
+			self.menu.cache_read()
+		else:
+			self.menu.start() # add initial tag
 
-		# Alias menu.insert() to i()
-		i = self.menu.insert
+			# Alias menu.insert() to i()
+			i = self.menu.insert
 
-		### Begin!
+			### Begin!
 
-		wallpaperadd = core.item(_("Add"), ga.execute("nitrogen-add-wallpaper"), icon="gtk-add") # Item that opens nitrogen-add-wallpaper
-		wallpapermanage = core.item(_("Manage"), ga.execute("nitrogen"), icon="preferences-desktop-wallpaper") # Item that opens nitrogen
-		wallpapermenu = core.menu("wallmenu", _("Wallpaper"), "\n".join((wallpaperadd, wallpapermanage)), icon="preferences-desktop-wallpaper") # Menu that has on it wallpaperadd and wallpapermanage
+			wallpaperadd = core.item(_("Add"), ga.execute("nitrogen-add-wallpaper"), icon="gtk-add") # Item that opens nitrogen-add-wallpaper
+			wallpapermanage = core.item(_("Manage"), ga.execute("nitrogen"), icon="preferences-desktop-wallpaper") # Item that opens nitrogen
+			wallpapermenu = core.menu("wallmenu", _("Wallpaper"), "\n".join((wallpaperadd, wallpapermanage)), icon="preferences-desktop-wallpaper") # Menu that has on it wallpaperadd and wallpapermanage
 
-		themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance"), icon="preferences-desktop-theme") # Theme selector
+			themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance"), icon="preferences-desktop-theme") # Theme selector
 
-		i(wallpapermenu)
-		i(themeselector)
+			i(wallpapermenu)
+			i(themeselector)
 
-		# End
-		self.menu.end()
+			# End
+			self.menu.end()

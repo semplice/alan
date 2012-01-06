@@ -101,42 +101,46 @@ class Extension(alan.core.extension.Extension):
 				return item
 
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu()
-		self.menu.start() # add initial tag
-
-		# Alias menu.insert() to i()
-		i = self.menu.insert
-
-		### Begin!
-
-		if split:
-			path = "/" + ids
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="xdgmenu", cache_trigger=(self.cfg.path, "/usr/share/applications/mimeinfo.cache",), cache_path=os.path.dirname(self.cfg.path))
+		if self.menu.cache_check():
+			# Read cache
+			self.menu.cache_read()
 		else:
-			path = "/"
-		i("\n".join(map(walk_menu, gmenu.lookup_tree(applications_menu).get_directory_from_path(path).get_contents())))
+			self.menu.start() # add initial tag
 
-		#### SYSTEM SETTINGS
-		if not ids and not hide_settings_menus:
-			i(core.separator)
+			# Alias menu.insert() to i()
+			i = self.menu.insert
 
-			# Prefs
-			prefs = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Preferences")
-			if not split:
-				prefs_items = "\n".join(map(walk_menu_system, prefs.get_contents()))
-				i(core.menu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), prefs_items, icon=prefs.icon))
+			### Begin!
+
+			if split:
+				path = "/" + ids
 			else:
-				i(core.pipemenu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], "System/Preferences"), icon=prefs.icon))
-			
-			# Admin
-			admin = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Administration")
-			if not split:
-				admin_items = "\n".join(map(walk_menu_system, admin.get_contents()))
-				i(core.menu(escape(admin.menu_id), escape(admin.name.replace("&","and")), admin_items, icon=admin.icon))
-			else:
-				i(core.pipemenu(escape(admin.menu_id), escape(admin.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], "System/Administration"), icon=admin.icon))
+				path = "/"
+			i("\n".join(map(walk_menu, gmenu.lookup_tree(applications_menu).get_directory_from_path(path).get_contents())))
 
-		# Display info object
-		#i(core.info(infos))
+			#### SYSTEM SETTINGS
+			if not ids and not hide_settings_menus:
+				i(core.separator)
 
-		# End
-		self.menu.end()
+				# Prefs
+				prefs = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Preferences")
+				if not split:
+					prefs_items = "\n".join(map(walk_menu_system, prefs.get_contents()))
+					i(core.menu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), prefs_items, icon=prefs.icon))
+				else:
+					i(core.pipemenu(escape(prefs.menu_id), escape(prefs.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], "System/Preferences"), icon=prefs.icon))
+				
+				# Admin
+				admin = gmenu.lookup_tree(applications_menu).get_directory_from_path("/System/Administration")
+				if not split:
+					admin_items = "\n".join(map(walk_menu_system, admin.get_contents()))
+					i(core.menu(escape(admin.menu_id), escape(admin.name.replace("&","and")), admin_items, icon=admin.icon))
+				else:
+					i(core.pipemenu(escape(admin.menu_id), escape(admin.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], "System/Administration"), icon=admin.icon))
+
+			# Display info object
+			#i(core.info(infos))
+
+			# End
+			self.menu.end()

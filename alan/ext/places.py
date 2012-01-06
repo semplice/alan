@@ -38,65 +38,68 @@ class Extension(alan.core.extension.Extension):
 		if not filemanager: filemanager = "pcmanfm" # Default to pcmanfm if not filemanager specified.
 		
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu()
-		self.menu.start() # add initial tag
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="places", cache_trigger=(self.cfg.path, os.path.join(HOME,".gtk-bookmarks"), "/proc/mounts"), cache_path=os.path.dirname(self.cfg.path))
+		if self.menu.cache_check():
+			self.menu.cache_read() # Read cache
+		else:
+			self.menu.start() # add initial tag
 
-		# Alias menu.insert() to i()
-		i = self.menu.insert
+			# Alias menu.insert() to i()
+			i = self.menu.insert
 
-		### Begin!
+			### Begin!
 
-		# Home
-		i(core.item(USER, ga.execute(self.exfm(filemanager, "file://%s" % HOME)), icon="user-home"))
+			# Home
+			i(core.item(USER, ga.execute(self.exfm(filemanager, "file://%s" % HOME)), icon="user-home"))
 
-		# Desktop
-		i(core.item(_("Desktop"), ga.execute(self.exfm(filemanager, "file://%s" % os.path.join(HOME,"Desktop"))), icon="user-desktop"))
+			# Desktop
+			i(core.item(_("Desktop"), ga.execute(self.exfm(filemanager, "file://%s" % os.path.join(HOME,"Desktop"))), icon="user-desktop"))
 
-		# Trash
-		i(core.item(_("Trash"), ga.execute(self.exfm(filemanager, "trash://")), icon="user-trash"))
+			# Trash
+			i(core.item(_("Trash"), ga.execute(self.exfm(filemanager, "trash://")), icon="user-trash"))
 
-		# Computer
-		i(core.item(_("Computer"), ga.execute(self.exfm(filemanager, "computer://")), icon="computer"))
+			# Computer
+			i(core.item(_("Computer"), ga.execute(self.exfm(filemanager, "computer://")), icon="computer"))
 
-		i(core.separator)
-
-		#### MOUNTED ITEMS
-
-		# Root (/)
-		i(core.item(_("System (/)"), ga.execute(self.exfm(filemanager, "file:///")), icon="drive-harddisk"))
-
-		with open("/proc/mounts") as mounts:
-
-			# Other items listed in /media
-			for media in mounts.readlines():
-				if "/media" in media:
-					
-					if ICONS:
-						if "iso9660" in media:
-							# It is a CD. Maybe.
-							icon = "media-optical"
-						else:
-							icon = "drive-harddisk"
-					else:
-						icon = ""
-					
-					# Is on media. Yay.
-					dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
-					i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(self.exfm(filemanager, dire)), icon=icon))
-
-		if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
 			i(core.separator)
 
-			_file = open(os.path.join(HOME, ".gtk-bookmarks"))
-			lines = _file.readlines()
-			for line in lines:
-				line = line.split(" ")
-				directory = line[0].replace("\n","")
-				if len(line) > 1:
-					name = " ".join(line[1:]).replace("_","__").replace("\n","")
-				else:
-					name = os.path.basename(directory.replace("file://","")).replace("_","__").replace("\n","")
-				i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon="folder"))
+			#### MOUNTED ITEMS
 
-		# End
-		self.menu.end()
+			# Root (/)
+			i(core.item(_("System (/)"), ga.execute(self.exfm(filemanager, "file:///")), icon="drive-harddisk"))
+
+			with open("/proc/mounts") as mounts:
+
+				# Other items listed in /media
+				for media in mounts.readlines():
+					if "/media" in media:
+						
+						if ICONS:
+							if "iso9660" in media:
+								# It is a CD. Maybe.
+								icon = "media-optical"
+							else:
+								icon = "drive-harddisk"
+						else:
+							icon = ""
+						
+						# Is on media. Yay.
+						dire = media.split(" ")[1].replace('\\040'," ") # use only the directory name
+						i(core.item(os.path.basename(dire).replace("_","__"), ga.execute(self.exfm(filemanager, dire)), icon=icon))
+
+			if os.path.exists(os.path.join(HOME, ".gtk-bookmarks")):
+				i(core.separator)
+
+				_file = open(os.path.join(HOME, ".gtk-bookmarks"))
+				lines = _file.readlines()
+				for line in lines:
+					line = line.split(" ")
+					directory = line[0].replace("\n","")
+					if len(line) > 1:
+						name = " ".join(line[1:]).replace("_","__").replace("\n","")
+					else:
+						name = os.path.basename(directory.replace("file://","")).replace("_","__").replace("\n","")
+					i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon="folder"))
+
+			# End
+			self.menu.end()
