@@ -34,6 +34,7 @@ import alan.core.actions.glob as ga
 import alan.core.extension
 
 import sys, os
+import glob
 
 import gmenu, re, sys
 from xml.sax.saxutils import escape
@@ -101,7 +102,7 @@ class Extension(alan.core.extension.Extension):
 				return item
 
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="xdgmenu", cache_trigger=(self.cfg.path, "/usr/share/applications/mimeinfo.cache",), cache_path=os.path.dirname(self.cfg.path))
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="xdgmenu", cache_trigger=(self.cfg.path, glob.glob("/usr/share/applications/desktop.*.cache")[0]))
 		if self.menu.cache_check():
 			# Read cache
 			self.menu.cache_read()

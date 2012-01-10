@@ -9,6 +9,8 @@
 import os
 import alan.core.hashme as hashme
 
+HOME = os.getenv("HOME")
+
 class PipeMenu:
 	def __init__(self, use_cache=False, cache=None, cache_trigger=(), cache_path=None):
 		# New pipe menu
@@ -18,11 +20,14 @@ class PipeMenu:
 		self.use_cache = use_cache
 		self.cache = cache
 		self.cache_trigger = cache_trigger
-		self.cache_path = cache_path
+		if cache_path == None:
+			self.cache_path = os.path.join(HOME, ".config/alan")
+		else:
+			self.cache_path = cache_path
 		if use_cache:
 			if os.getenv("ALANICONS"):
 				# use icons, trigger the gtkrc.
-				self.cache_trigger = self.cache_trigger + (os.path.join(os.getenv("HOME"), ".gtkrc-2.0"),)
+				self.cache_trigger = self.cache_trigger + (os.path.join(HOME, ".gtkrc-2.0"),)
 		
 		self.cache_loaded = False
 	

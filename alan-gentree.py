@@ -121,7 +121,7 @@ if head == False: head = "__username__"
 use_cache = conf.printv("use_cache","Alan")
 
 # Create menu object
-menu = struct.PipeMenu(use_cache=use_cache, cache="tree", cache_trigger=(conf.path,), cache_path=os.path.dirname(conf.path))
+menu = struct.PipeMenu(use_cache=use_cache, cache="tree", cache_trigger=(conf.path,))
 if use_cache and menu.cache_check():
 	# Oh, yay :) We can use the cache instead.
 	menu.cache_read()

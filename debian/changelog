@@ -1,3 +1,12 @@
+alan (0.5.1-1) pulse; urgency=low
+
+  * core/structure.py: calculate cache_path without extra input (still
+    able to specify)
+  * modules/* (!exaile), alan-gentree: dropped cache_patch declaration
+  * modules/xdgmenu.py: trigger on the locale-cache file on /usr/share/applications
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 10 Jan 2012 22:14:13 +0100
+
 alan (0.5.0-1) pulse; urgency=low
 
   * alan-gentree: indentation on defs on parsename. Easier to add new entries.

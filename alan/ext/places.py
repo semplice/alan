@@ -38,7 +38,7 @@ class Extension(alan.core.extension.Extension):
 		if not filemanager: filemanager = "pcmanfm" # Default to pcmanfm if not filemanager specified.
 		
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="places", cache_trigger=(self.cfg.path, os.path.join(HOME,".gtk-bookmarks"), "/proc/mounts"), cache_path=os.path.dirname(self.cfg.path))
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="places", cache_trigger=(self.cfg.path, os.path.join(HOME,".gtk-bookmarks"), "/proc/mounts"))
 		if self.menu.cache_check():
 			self.menu.cache_read() # Read cache
 		else:

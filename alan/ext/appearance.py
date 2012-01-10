@@ -25,7 +25,7 @@ infos = {"Coders":coders}
 class Extension(alan.core.extension.Extension):
 	def run(self):
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="appearance", cache_trigger=(self.cfg.path,), cache_path=os.path.dirname(self.cfg.path))
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="appearance", cache_trigger=(self.cfg.path,))
 		if self.menu.cache_check():
 			self.menu.cache_read()
 		else:
