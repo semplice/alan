@@ -1,0 +1,198 @@
+# Spanish translation for alan
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the alan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alan\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-01-03 18:03+0100\n"
+"PO-Revision-Date: 2012-01-12 08:52+0000\n"
+"Last-Translator: xukosky <Unknown>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-01-13 05:06+0000\n"
+"X-Generator: Launchpad (build 14664)\n"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Información"
+
+#: alan/ext/appearance.py:34
+msgid "Add"
+msgstr "Añadir"
+
+#: alan/ext/appearance.py:35
+msgid "Manage"
+msgstr "Administrar"
+
+#: alan/ext/appearance.py:36
+msgid "Wallpaper"
+msgstr "Fondo de pantalla"
+
+#: alan/ext/appearance.py:38
+msgid "Appearance settings"
+msgstr "Configuraciones de aspecto"
+
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr "Programadores"
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr "Reproducir"
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr "Pausar"
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr "Detener"
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr "Reproducir una canción aleatoria"
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr "Anterior"
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr "Siguiente"
+
+#: alan/ext/places.py:53 alan-gentree.py:30
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: alan/ext/places.py:56
+msgid "Trash"
+msgstr "Papelera"
+
+#: alan/ext/places.py:59
+msgid "Computer"
+msgstr "Ordenador"
+
+#: alan/ext/places.py:66
+msgid "System (/)"
+msgstr "Sistema (/)"
+
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
+msgstr "Exaile no está en reproducción."
+
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
+msgstr "Abrir Exaile"
+
+#: alan/ext/logout.py:44
+msgid "Lock Screen"
+msgstr "Bloquear la pantalla"
+
+#: alan/ext/logout.py:44 alan-gentree.py:31
+msgid "Logout"
+msgstr "Cerrar la sesión"
+
+#: alan/ext/logout.py:44
+msgid "Switch User"
+msgstr "Cambiar de usuario"
+
+#: alan/ext/logout.py:44
+msgid "Suspend"
+msgstr "Suspender"
+
+#: alan/ext/logout.py:44
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: alan/ext/logout.py:44
+msgid "Shutdown"
+msgstr "Apagar"
+
+#: alan/ext/logout.py:44
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#: alan/ext/logout.py:64
+msgid " (CTRL+ALT+SPACE)"
+msgstr " (CONTROL+ALT+ESPACIO)"
+
+#: alan/ext/logout.py:78
+msgid "Settings..."
+msgstr "Configuraciones..."
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr "¡Módulo no encontrado!"
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr "Se ha producido un error al ejecutar el módulo."
+
+#: alan-gentree.py:25
+msgid "Web Browser"
+msgstr "Navegador web"
+
+#: alan-gentree.py:26
+msgid "Terminal Emulator"
+msgstr "Emulador de terminal"
+
+#: alan-gentree.py:27
+msgid "IRC Chat"
+msgstr "Cliente IRC"
+
+#: alan-gentree.py:28
+msgid "Applications"
+msgstr "Programas"
+
+#: alan-gentree.py:29
+msgid "Places"
+msgstr "Lugares"
+
+#: alan-gentree.py:32
+msgid "Extensions"
+msgstr "Extensiones"
+
+#: alan-gentree.py:33
+msgid "Music"
+msgstr "Música"
+
+#: alan-gentree.py:34
+msgid "Help"
+msgstr "Ayuda"
+
+#: alan-gentree.py:35
+msgid "About Semplice..."
+msgstr "Acerca de Semplice..."
+
+#: alan-gentree.py:36
+msgid "Support"
+msgstr "Soporte"
+
+#: alan-gentree.py:37
+msgid "Semplice Website"
+msgstr "Sitio web de Semplice"
+
+#: alan-gentree.py:38
+msgid "Semplice Wiki"
+msgstr "Wiki de Semplice"
+
+#: alan-gentree.py:39
+msgid "Semplice Forums"
+msgstr "Foros de Semplice"
+
+#: alan-gentree.py:40
+msgid "Semplice on IRC"
+msgstr "Semplice en IRC"
+
+#: alan-gentree.py:41
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: alan-gentree.py:42
+msgid "Install Semplice"
+msgstr "Instalar Semplice"
