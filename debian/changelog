@@ -1,3 +1,11 @@
+alan (0.5.2-1) pulse; urgency=low
+
+  * core/structure.py: check for triggers
+  * modules/xdgmenu.py: disable cache for now.
+  * tree.conf: updated links in Help menu.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 14 Jan 2012 20:28:10 +0100
+
 alan (0.5.1-1) pulse; urgency=low
 
   * core/structure.py: calculate cache_path without extra input (still

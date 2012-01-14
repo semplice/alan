@@ -102,7 +102,8 @@ class Extension(alan.core.extension.Extension):
 				return item
 
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="xdgmenu", cache_trigger=(self.cfg.path, glob.glob("/usr/share/applications/desktop.*.cache")[0]))
+		#self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="xdgmenu", cache_trigger=(self.cfg.path, glob.glob("/usr/share/applications/desktop.*.cache")[0]))
+		self.menu = struct.PipeMenu(use_cache=False, cache="xdgmenu", cache_trigger=(self.cfg.path, glob.glob("/usr/share/applications/desktop.*.cache")[0]))
 		if self.menu.cache_check():
 			# Read cache
 			self.menu.cache_read()

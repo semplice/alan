@@ -39,6 +39,9 @@ class PipeMenu:
 				
 		md5s = {}
 		for trigger in self.cache_trigger:
+			if not os.path.exists(trigger):
+				# Trigger doesn't exist. False.
+				return False
 			md5 = hashme.md5()
 			md5 = md5.file(trigger)
 			md5s[trigger] = md5
