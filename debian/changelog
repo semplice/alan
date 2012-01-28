@@ -1,3 +1,9 @@
+alan (0.5.4-1) pulse; urgency=low
+
+  * core/structure.py: check for triggers when writing.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 28 Jan 2012 21:51:05 +0100
+
 alan (0.5.3-1) pulse; urgency=low
 
   * modules/xdgmenu.py: cleaned the pipemenu call.

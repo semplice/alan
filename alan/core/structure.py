@@ -123,6 +123,9 @@ class PipeMenu:
 						
 			with open(_file, "w") as f:
 				for trigger in self.cache_trigger:
+					if not os.path.exists(trigger):
+						# Skip, will wrote the cache but it will not be used.
+						continue
 					md5 = hashme.md5()
 					md5 = md5.file(trigger)
 					
