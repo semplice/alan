@@ -1,0 +1,198 @@
+# English (Australia) translation for alan
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the alan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alan\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-01-03 18:03+0100\n"
+"PO-Revision-Date: 2012-02-09 07:17+0000\n"
+"Last-Translator: Joel Pickett <jlkpcktt@gmail.com>\n"
+"Language-Team: English (Australia) <en_AU@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-02-09 07:39+0000\n"
+"X-Generator: Launchpad (build 14763)\n"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Info"
+
+#: alan/ext/appearance.py:34
+msgid "Add"
+msgstr "Add"
+
+#: alan/ext/appearance.py:35
+msgid "Manage"
+msgstr "Manage"
+
+#: alan/ext/appearance.py:36
+msgid "Wallpaper"
+msgstr "Wallpaper"
+
+#: alan/ext/appearance.py:38
+msgid "Appearance settings"
+msgstr "Appearance settings"
+
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr "Coders"
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr "Play"
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr "Pause"
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr "Stop"
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr "Play a random song"
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr "Previous"
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr "Next"
+
+#: alan/ext/places.py:53 alan-gentree.py:30
+msgid "Desktop"
+msgstr "Desktop"
+
+#: alan/ext/places.py:56
+msgid "Trash"
+msgstr "Rubbish Bin"
+
+#: alan/ext/places.py:59
+msgid "Computer"
+msgstr "Computer"
+
+#: alan/ext/places.py:66
+msgid "System (/)"
+msgstr "System (/)"
+
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
+msgstr "Exaile is not playing."
+
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
+msgstr "Open Exaile"
+
+#: alan/ext/logout.py:44
+msgid "Lock Screen"
+msgstr "Lock Screen"
+
+#: alan/ext/logout.py:44 alan-gentree.py:31
+msgid "Logout"
+msgstr "Logout"
+
+#: alan/ext/logout.py:44
+msgid "Switch User"
+msgstr "Switch User"
+
+#: alan/ext/logout.py:44
+msgid "Suspend"
+msgstr "Suspend"
+
+#: alan/ext/logout.py:44
+msgid "Hibernate"
+msgstr "Hibernate"
+
+#: alan/ext/logout.py:44
+msgid "Shutdown"
+msgstr "Shutdown"
+
+#: alan/ext/logout.py:44
+msgid "Reboot"
+msgstr "Reboot"
+
+#: alan/ext/logout.py:64
+msgid " (CTRL+ALT+SPACE)"
+msgstr " (CTRL+ALT+SPACE)"
+
+#: alan/ext/logout.py:78
+msgid "Settings..."
+msgstr "Settings..."
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr "Module not found!"
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr "An error occurred while running the module."
+
+#: alan-gentree.py:25
+msgid "Web Browser"
+msgstr "Web Browser"
+
+#: alan-gentree.py:26
+msgid "Terminal Emulator"
+msgstr "Terminal Emulator"
+
+#: alan-gentree.py:27
+msgid "IRC Chat"
+msgstr "IRC Chat"
+
+#: alan-gentree.py:28
+msgid "Applications"
+msgstr "Applications"
+
+#: alan-gentree.py:29
+msgid "Places"
+msgstr "Places"
+
+#: alan-gentree.py:32
+msgid "Extensions"
+msgstr "Extensions"
+
+#: alan-gentree.py:33
+msgid "Music"
+msgstr "Music"
+
+#: alan-gentree.py:34
+msgid "Help"
+msgstr "Help"
+
+#: alan-gentree.py:35
+msgid "About Semplice..."
+msgstr "About Semplice..."
+
+#: alan-gentree.py:36
+msgid "Support"
+msgstr "Support"
+
+#: alan-gentree.py:37
+msgid "Semplice Website"
+msgstr "Semplice Website"
+
+#: alan-gentree.py:38
+msgid "Semplice Wiki"
+msgstr "Semplice Wiki"
+
+#: alan-gentree.py:39
+msgid "Semplice Forums"
+msgstr "Semplice Forums"
+
+#: alan-gentree.py:40
+msgid "Semplice on IRC"
+msgstr "Semplice on IRC"
+
+#: alan-gentree.py:41
+msgid "Appearance"
+msgstr "Appearance"
+
+#: alan-gentree.py:42
+msgid "Install Semplice"
+msgstr "Install Semplice"
