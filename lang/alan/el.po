@@ -1,0 +1,198 @@
+# Greek translation for alan
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the alan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: alan\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-01-03 18:03+0100\n"
+"PO-Revision-Date: 2012-04-09 05:03+0000\n"
+"Last-Translator: dpdt1 <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-04-09 05:08+0000\n"
+"X-Generator: Launchpad (build 15060)\n"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Πληροφορίες"
+
+#: alan/ext/appearance.py:34
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: alan/ext/appearance.py:35
+msgid "Manage"
+msgstr "Διαχείριση"
+
+#: alan/ext/appearance.py:36
+msgid "Wallpaper"
+msgstr "Ταπετσαρία"
+
+#: alan/ext/appearance.py:38
+msgid "Appearance settings"
+msgstr "Ρυθμίσεις Εμφάνισης"
+
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr "Προγραμματιστές"
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr "Παύση"
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr "Αναπαραγωγή τυχαίου τραγουδιού"
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr "Επόμενο"
+
+#: alan/ext/places.py:53 alan-gentree.py:30
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: alan/ext/places.py:56
+msgid "Trash"
+msgstr "Κάδος Απορριμμάτων"
+
+#: alan/ext/places.py:59
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: alan/ext/places.py:66
+msgid "System (/)"
+msgstr "Σύστημα Αρχείων (/)"
+
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
+msgstr "Ο Exaile δεν παίζει"
+
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
+msgstr "Άνοιγμα Exaile"
+
+#: alan/ext/logout.py:44
+msgid "Lock Screen"
+msgstr "Κλείδωμα Οθόνης"
+
+#: alan/ext/logout.py:44 alan-gentree.py:31
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+#: alan/ext/logout.py:44
+msgid "Switch User"
+msgstr "Εναλλαγή Χρήστη"
+
+#: alan/ext/logout.py:44
+msgid "Suspend"
+msgstr "Αναστολή"
+
+#: alan/ext/logout.py:44
+msgid "Hibernate"
+msgstr "Αδρανοποίηση"
+
+#: alan/ext/logout.py:44
+msgid "Shutdown"
+msgstr "Τερματισμός"
+
+#: alan/ext/logout.py:44
+msgid "Reboot"
+msgstr "Επανεκκίνηση"
+
+#: alan/ext/logout.py:64
+msgid " (CTRL+ALT+SPACE)"
+msgstr " (CTRL+ALT+SPACE)"
+
+#: alan/ext/logout.py:78
+msgid "Settings..."
+msgstr "Ρυθμίσεις..."
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr ""
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr ""
+
+#: alan-gentree.py:25
+msgid "Web Browser"
+msgstr "Περιηγητής Ιστού"
+
+#: alan-gentree.py:26
+msgid "Terminal Emulator"
+msgstr "Προσομοιωτής Τερματικού"
+
+#: alan-gentree.py:27
+msgid "IRC Chat"
+msgstr "Συζήτηση IRC"
+
+#: alan-gentree.py:28
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+#: alan-gentree.py:29
+msgid "Places"
+msgstr "Τοποθεσίες"
+
+#: alan-gentree.py:32
+msgid "Extensions"
+msgstr "Επεκτάσεις"
+
+#: alan-gentree.py:33
+msgid "Music"
+msgstr "Μουσική"
+
+#: alan-gentree.py:34
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: alan-gentree.py:35
+msgid "About Semplice..."
+msgstr "Σχετικά με τον Semplice..."
+
+#: alan-gentree.py:36
+msgid "Support"
+msgstr "Υποστήριξη"
+
+#: alan-gentree.py:37
+msgid "Semplice Website"
+msgstr "Ιστότοπος Semplice"
+
+#: alan-gentree.py:38
+msgid "Semplice Wiki"
+msgstr "Semplice Wiki"
+
+#: alan-gentree.py:39
+msgid "Semplice Forums"
+msgstr "Semplice Forums"
+
+#: alan-gentree.py:40
+msgid "Semplice on IRC"
+msgstr "Το Semplice στο IRC"
+
+#: alan-gentree.py:41
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: alan-gentree.py:42
+msgid "Install Semplice"
+msgstr "Εγκατάσταση Semplice"
