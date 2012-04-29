@@ -1,3 +1,9 @@
+alan (0.6.0~pre1-1) pulse; urgency=low
+
+  * ext/logout.py: reworked, added fast-user-switching and guest session.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 29 Apr 2012 13:41:19 +0200
+
 alan (0.5.4-1) pulse; urgency=low
 
   * core/structure.py: check for triggers when writing.
