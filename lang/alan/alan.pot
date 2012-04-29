@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-03 18:03+0100\n"
+"POT-Creation-Date: 2012-04-29 13:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,19 +21,35 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: alan/ext/appearance.py:34
+#: alan/ext/updates.py:58 alan/ext/places.py:56 alan-gentree.py:30
+msgid "Desktop"
+msgstr ""
+
+#: alan/ext/updates.py:61 alan/ext/places.py:59
+msgid "Trash"
+msgstr ""
+
+#: alan/ext/updates.py:64 alan/ext/places.py:62
+msgid "Computer"
+msgstr ""
+
+#: alan/ext/updates.py:71 alan/ext/places.py:69
+msgid "System (/)"
+msgstr ""
+
+#: alan/ext/appearance.py:39
 msgid "Add"
 msgstr ""
 
-#: alan/ext/appearance.py:35
+#: alan/ext/appearance.py:40
 msgid "Manage"
 msgstr ""
 
-#: alan/ext/appearance.py:36
+#: alan/ext/appearance.py:41
 msgid "Wallpaper"
 msgstr ""
 
-#: alan/ext/appearance.py:38
+#: alan/ext/appearance.py:43
 msgid "Appearance settings"
 msgstr ""
 
@@ -65,22 +81,6 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: alan/ext/places.py:53 alan-gentree.py:30
-msgid "Desktop"
-msgstr ""
-
-#: alan/ext/places.py:56
-msgid "Trash"
-msgstr ""
-
-#: alan/ext/places.py:59
-msgid "Computer"
-msgstr ""
-
-#: alan/ext/places.py:66
-msgid "System (/)"
-msgstr ""
-
 #: alan/ext/exaile.py:74
 msgid "Exaile is not playing."
 msgstr ""
@@ -89,39 +89,51 @@ msgstr ""
 msgid "Open Exaile"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:77
 msgid "Lock Screen"
 msgstr ""
 
-#: alan/ext/logout.py:44 alan-gentree.py:31
+#: alan/ext/logout.py:50 alan/ext/logout.py:80 alan-gentree.py:31
 msgid "Logout"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:119
 msgid "Switch User"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:114
+msgid "Guest session"
+msgstr ""
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:125
 msgid "Suspend"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:128
 msgid "Hibernate"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:134
 msgid "Shutdown"
 msgstr ""
 
-#: alan/ext/logout.py:44
+#: alan/ext/logout.py:50 alan/ext/logout.py:137
 msgid "Reboot"
 msgstr ""
 
-#: alan/ext/logout.py:64
-msgid " (CTRL+ALT+SPACE)"
+#: alan/ext/logout.py:70
+msgid "(CTRL+ALT+SPACE)"
 msgstr ""
 
-#: alan/ext/logout.py:78
+#: alan/ext/logout.py:109
+msgid "Change profile image"
+msgstr ""
+
+#: alan/ext/logout.py:116
+msgid "Other..."
+msgstr ""
+
+#: alan/ext/logout.py:148
 msgid "Settings..."
 msgstr ""
 
