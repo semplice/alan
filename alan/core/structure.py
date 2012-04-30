@@ -24,6 +24,7 @@ class PipeMenu:
 			self.cache_path = os.path.join(HOME, ".config/alan")
 		else:
 			self.cache_path = cache_path
+		if not os.path.exists(self.cache_path): os.makedirs(self.cache_path) # create cache_path if it doesn't exist.
 		if use_cache:
 			if os.getenv("ALANICONS"):
 				# use icons, trigger the gtkrc.

@@ -1,3 +1,10 @@
+alan (0.6.0~pre2-1) pulse; urgency=low
+
+  * ext/logout.py: temporaily disabling guest session
+  * core/structure.py: create cache_path if it doesn't exist.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 30 Apr 2012 17:10:14 +0200
+
 alan (0.6.0~pre1-1) pulse; urgency=low
 
   * ext/logout.py: reworked, added fast-user-switching and guest session.

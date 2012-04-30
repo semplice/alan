@@ -111,7 +111,7 @@ class Extension(alan.core.extension.Extension):
 					
 			# add guest session
 			switch_items.append(core.separator)
-			switch_items.append(core.item(_("Guest session"), ga.execute("semplice-logout --switch-to-guest"), icon="system-users"))
+			#switch_items.append(core.item(_("Guest session"), ga.execute("semplice-logout --switch-to-guest"), icon="system-users"))
 			# add Other...
 			switch_items.append(core.item(_("Other..."), ga.execute("semplice-logout --switch-user"), icon="gdm"))
 			
