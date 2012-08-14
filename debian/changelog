@@ -1,3 +1,9 @@
+alan (0.6.0~pre3-1) pulse; urgency=low
+
+  * tree.conf: ensure we call semplice-help-irc from its item.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 14 Aug 2012 16:43:21 +0200
+
 alan (0.6.0~pre2-1) pulse; urgency=low
 
   * ext/logout.py: temporaily disabling guest session
