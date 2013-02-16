@@ -1,0 +1,282 @@
+alan (0.6.0~pre3-1) pulse; urgency=low
+
+  * tree.conf: ensure we call semplice-help-irc from its item.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 14 Aug 2012 16:43:21 +0200
+
+alan (0.6.0~pre2-1) pulse; urgency=low
+
+  * ext/logout.py: temporaily disabling guest session
+  * core/structure.py: create cache_path if it doesn't exist.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 30 Apr 2012 17:10:14 +0200
+
+alan (0.6.0~pre1-1) pulse; urgency=low
+
+  * ext/logout.py: reworked, added fast-user-switching and guest session.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 29 Apr 2012 13:41:19 +0200
+
+alan (0.5.4-1) pulse; urgency=low
+
+  * core/structure.py: check for triggers when writing.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 28 Jan 2012 21:51:05 +0100
+
+alan (0.5.3-1) pulse; urgency=low
+
+  * modules/xdgmenu.py: cleaned the pipemenu call.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 15 Jan 2012 11:24:06 +0100
+
+alan (0.5.2-1) pulse; urgency=low
+
+  * core/structure.py: check for triggers
+  * modules/xdgmenu.py: disable cache for now.
+  * tree.conf: updated links in Help menu.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 14 Jan 2012 20:28:10 +0100
+
+alan (0.5.1-1) pulse; urgency=low
+
+  * core/structure.py: calculate cache_path without extra input (still
+    able to specify)
+  * modules/* (!exaile), alan-gentree: dropped cache_patch declaration
+  * modules/xdgmenu.py: trigger on the locale-cache file on /usr/share/applications
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 10 Jan 2012 22:14:13 +0100
+
+alan (0.5.0-1) pulse; urgency=low
+
+  * alan-gentree: indentation on defs on parsename. Easier to add new entries.
+  * tree.conf: added Help submenu, added xchat to the applist.
+  * alan-gentree: added support for changing the main header.
+  * tree.conf: documentation for changing header.
+  * core/config.py: ported fork support from pylaivng.
+  * core/: added hashme, taken from pylaivng.
+  * core/structure.py: cache support.
+  * alan-gentree, modules/* (!exaile): cache support.
+  * tree.conf: use_cache by default.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 06 Jan 2012 15:47:23 +0100
+
+alan (0.4.1-1) pulse; urgency=low
+
+  * Initial pulse release.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 03 Jan 2012 12:56:52 +0100
+
+alan (0.4.0-1) emily; urgency=low
+
+  * ext/xdgmenu.py: fallback to applications.menu if not gnome-applications.menu;
+    New setting hide_settings_menu that hides the Preferences and Administration
+    menus.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 10 Dec 2011 16:42:54 +0100
+
+alan (0.4.0~pre5.3-1) emily; urgency=low
+
+  * ext/exaile.py: fixed typo.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 02 Dec 2011 22:11:40 +0100
+
+alan (0.4.0~pre5.2-1) emily; urgency=low
+
+  * Added german translations, kudos to Ikem Krueger (closes LP: #877814)
+  * ext/exaile.py: do not translate "Exaile" and "%s".
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 02 Dec 2011 19:59:41 +0100
+
+alan (0.4.0~pre5.1-1) emily; urgency=low
+
+  * ext/xdgmenu.py: fixed compatibility issues with gnome-menus 3.x.
+  * ext/exaile.py: made extension id-independent.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 17 Oct 2011 17:46:29 +0200
+
+alan (0.4.0~pre5-1) emily; urgency=low
+
+  * Added Exaile plugin. 
+  * Moved music.py to music_old.py
+
+ -- Luca B. <sidtux@gmail.com>  Fri, 23 Sep 2011 22:18:31 +0200
+
+alan (0.4.0~pre4.2-1) emily; urgency=low
+
+  * ext/logout.py: fixed none handling.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 18 Sep 2011 11:13:25 +0200
+
+alan (0.4.0~pre4.1-1) emily; urgency=low
+
+  * core/config.py: support for "None" value; lower item
+                    to check for "true","false","none" in
+                    order to support more syntaxes.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 17 Sep 2011 17:00:25 +0200
+
+alan (0.4.0~pre4-1) emily; urgency=low
+
+  * ext/logout.py: Handle 'None' action; "(CTRL+ALT+SPACE)"
+                   translatable.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 16 Sep 2011 18:53:50 +0200
+
+alan (0.4.0~pre3-1) emily; urgency=low
+
+  * ext/places.py: Use directory basename if not name is specified.
+  * ext/xdgmenu.py: Fixed some rendering issues
+  * ext/logout.py: updated to semplice-logout 1.13.0; added Settings
+    option.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 15 Sep 2011 23:12:14 +0200
+
+alan (0.4.0~pre2-1) emily; urgency=low
+
+  * ext/places.py:
+    - Do not prepend file:// in bookmarks;
+    - Drop \n when reading from bookmarks;
+    - Moved exfm into Extension class;
+    - Support for 'filemanager' option in configuration file.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 06 Sep 2011 19:53:05 +0200
+
+alan (0.4.0~pre1.2-1) emily; urgency=low
+
+  * Do not store a bool in ALANICONS.
+  * Maintainer changed to match my new GPG key.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 20:39:43 +0200
+
+alan (0.4.0~pre1.1-1) emily; urgency=low
+
+  * Fixed separator issues in alan-gentree.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 20:19:41 +0200
+
+alan (0.4.0~pre1-1) emily; urgency=low
+
+  * Added icon support. Requires Openbox 3.5.0 and enable_icons = True
+    in config.
+  * core/config.py: return False instead of "false" if an option isn't
+    on the configuration file.
+  * core/config.py: added load_config() function, loads a configuration.
+    replaces the configuration loading process in alan-gentree.py
+  * alan-show-extension: add configuration support. Use ids instead of
+    real extension name in command-line argument.
+  * ext/*: icon support, except for music.
+  * core/: added extension library.
+  * ext/*: adapted to match the inclusion of the new alan.core.extension.
+    WARNING: THIS BREAKS ALL OLDER EXTENSIONS!
+    Your extension should now be into the class Extension (derivative
+    of alan.core.extension.Extension), definition run.
+    .
+    menu should become self.menu!
+  * ext/xdgmenu: support for configuration variable split_menu.
+    If True, the categories will be loaded when the user will
+    pass its cursor on.
+    Default is False.
+  * core/config: ConfigRead: if option value is "True" or "False",
+    return relative booleans instead of string.
+  * debian/* and setup.cfg:
+    - Ship alan to /usr/share/alan instead of /usr/lib/alan
+  * tree.conf: added icons, split_menu = False.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 27 Aug 2011 12:55:28 +0200
+
+alan (0.3.1.2-1) emily; urgency=medium
+
+  * Removed reference on alan.core.translations in objects/core.py
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 14 Aug 2011 20:46:36 +0200
+
+alan (0.3.1.1-1) emily; urgency=low
+
+  * Updated translations.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 13 Aug 2011 20:21:17 +0200
+
+alan (0.3.1-1) emily; urgency=low
+
+  * typo occoured -> occurred
+  * gentree: __itemlist__: do not directly insert header, append to 'items' instead.
+  * removed deprecated alan.core.translations.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 12 Aug 2011 20:45:02 +0200
+
+alan (0.3.0-1) emily; urgency=low
+
+  * Use t9n.library instead of alan.translations (which is basically the same thing)
+  * Handle separately the 'Module not found' and 'An error occoured when running the module' errors
+  * debian/: control: depend on python-t9n
+  * Do not rely on menu.printm() anymore: alan-show-extension will handle printing
+  * As menu.printm() is dropped, a new property is added: menu.final_menu
+  
+  * The user can now add an extension as many times he/she wants
+  * [ext:<name>] will now not declare the extension name, but only the menu id
+  * To specify which extension should be used, a new option in the configuration
+    file was added: ext. (e.g.: ext = xdgmenu)
+  * Some more comments in the configuration file ;)
+  * Dropped the "main_<name>" syntax: to convert a normal category into a 'main' one,
+    just put @ before the category name (only on [Alan] section)
+
+  * Support for headers in __itemlist__
+  * tree.cfg renamed to tree.conf
+  * shipping tree.conf in /etc/alan instead of /usr/share/alan
+  * do not copy the configuration in ~/.config/alan anymore: prefer the config in /etc
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 11 Aug 2011 23:57:04 +0200
+
+alan (0.2.1.3) emily; urgency=low
+
+  * Building source with bzr-builddeb; should be resolved alan-dropbox.py issue.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 06 Jul 2011 13:04:14 +0200
+
+alan (0.2.1.2) emily; urgency=low
+
+  * Added (partial) turkish translation.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 05 Jul 2011 12:58:47 +0200
+
+alan (0.2.1.1) emily; urgency=low
+
+  * Updated translations.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 08 Jun 2011 20:43:46 +0200
+
+alan (0.2.1) emily; urgency=low
+
+  * alan-gentree.py: changed to use alan-show-extension intstead of alan-show-extension.py
+  * switched to distutils
+  * debian packaging:
+    - Switched to dh_python2; shipping lib and scripts in /usr/lib/alan;
+    - Symlink /usr/lib/alan/alan-{show-extension,gentree}.py to /usr/bin (without extension)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 08 Jun 2011 20:32:53 +0200
+
+alan (0.2.0) emily; urgency=low
+
+  * New upstream release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 07 Jun 2011 21:39:59 +0200
+
+alan (0.1.2) emily; urgency=low
+
+  * debian/control: Architecture any -> all; alan: Depends += python-mpd
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 11 May 2011 20:37:06 +0200
+
+alan (0.1.1) emily; urgency=low
+
+  * alan-show-extension: added "(or an error occoured)" string if
+    module can't be loaded (but it exist).
+  * extensions: music.py: fixed play, pause, stop etc commands.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 11 May 2011 20:20:11 +0200
+
+alan (0.1.0) emily; urgency=low
+
+  * Initial Release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 11 May 2011 15:44:38 +0200
