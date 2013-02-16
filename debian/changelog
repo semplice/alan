@@ -1,3 +1,9 @@
+alan (0.6.0~pre3+next-1) unstable; urgency=low
+
+  * Initial upload to current.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 16 Feb 2013 18:40:54 +0100
+
 alan (0.6.0~pre3-1) pulse; urgency=low
 
   * tree.conf: ensure we call semplice-help-irc from its item.
