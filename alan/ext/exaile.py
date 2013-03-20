@@ -73,7 +73,7 @@ class Extension(alan.core.extension.Extension):
                 #i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="/usr/share/pixmaps/exaile.png"))
                 i(core.item(_("Exaile is not playing."), ga.execute(""), icon=""))
         except dbus.exceptions.DBusException:
-            i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="/usr/share/pixmaps/exaile.png"))
+            i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="exaile"))
             #print("Exaile is not running.")
 
         self.menu.end()

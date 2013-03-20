@@ -42,8 +42,12 @@ class Extension(alan.core.extension.Extension):
 
 			themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance"), icon="preferences-desktop-theme") # Theme selector
 
+			paranoid = core.item(_("Desktop effects preferences"), ga.execute("paranoid"), icon="preferences-system-windows") # paranoid
+
 			i(wallpapermenu)
+			i(core.separator)
 			i(themeselector)
+			i(paranoid)
 
 			# End
 			self.menu.end()

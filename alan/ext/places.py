@@ -75,7 +75,7 @@ class Extension(alan.core.extension.Extension):
 					if "/media" in media:
 						
 						if ICONS:
-							if "iso9660" in media:
+							if "iso9660" in media or "udf" in media:
 								# It is a CD. Maybe.
 								icon = "media-optical"
 							else:
