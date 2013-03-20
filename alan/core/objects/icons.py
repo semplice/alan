@@ -16,7 +16,7 @@ enabled = os.getenv("ALANICONS")
 
 if enabled:
 	#from gi.repository.Gtk import IconTheme
-	from gtk import icon_theme_get_default
+	from gtk import icon_theme_get_default, ICON_LOOKUP_NO_SVG
 
 def get_stock_icon(icon, size=size):
 	""" Gets an icon from the STOCK GTK+ icons repository.
@@ -24,7 +24,7 @@ def get_stock_icon(icon, size=size):
 	
 	#theme = IconTheme.new()
 	theme = icon_theme_get_default()
-	icon = theme.lookup_icon(icon, size, 0)
+	icon = theme.lookup_icon(icon.replace(".png","").replace(".xpm","").replace(".svg",""), size, ICON_LOOKUP_NO_SVG)
 	
 	if icon:
 		return icon.get_filename()
