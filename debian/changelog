@@ -1,3 +1,12 @@
+alan (0.6.0~pre4-1) unstable; urgency=low
+
+  * core/objects/icons.py: fixed icon handling on certain applications.
+  * alan/ext/appearance: Added paranoid item.
+  * alan/ext/exaile: use icon theme's icon for exaile.
+  * alan/ext/places: set CD icon for UDF volumes too.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 20 Mar 2013 14:53:52 +0100
+
 alan (0.6.0~pre3+next-1) unstable; urgency=low
 
   * Initial upload to current.
