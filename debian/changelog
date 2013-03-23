@@ -1,3 +1,9 @@
+alan (0.6.0~pre5-1) unstable; urgency=low
+
+  * Ensure we escape & on every label.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 23 Mar 2013 11:42:54 +0100
+
 alan (0.6.0~pre4-1) unstable; urgency=low
 
   * core/objects/icons.py: fixed icon handling on certain applications.
