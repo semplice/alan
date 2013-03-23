@@ -30,7 +30,7 @@ def menu(id, label="", objects="", icon=""):
 	""" Inline menu. "objects" should already exists. """
 		
 	if label:
-		label = "label=\"%s\"" % label.replace('"', '').replace("&","and")
+		label = "label=\"%s\"" % label.replace('"', '').replace("&","&amp;")
 	
 	if icon and ico.get_icon(icon):
 		icon = "icon=\"%s\"" % ico.get_icon(icon)
@@ -49,7 +49,7 @@ def pipemenu(id, label, command, icon=""):
 	else:
 		icon = ""
 
-	return """<menu id="%s" label="%s" execute="%s" %s />""" % (id, label.replace('"','').replace("&","and"), command, icon)
+	return """<menu id="%s" label="%s" execute="%s" %s />""" % (id, label.replace('"','').replace("&","&amp;"), command, icon)
 
 def item(label, action, icon=""):
 	""" Item. Action should already exist. """
@@ -61,7 +61,7 @@ def item(label, action, icon=""):
 
 	return """<item label="%s" %s>
 	%s
-</item>""" % (label.replace('"',''), icon, action)
+</item>""" % (label.replace('"','').replace("&","&amp;"), icon, action)
 
 def info(authors, sep=True, icon=False):
 	""" Displays informations on the extension.
