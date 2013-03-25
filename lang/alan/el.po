@@ -1,149 +1,22 @@
-# Greek translation for alan
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the alan package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-04-29 13:43+0200\n"
-"PO-Revision-Date: 2012-04-09 05:56+0000\n"
-"Last-Translator: dpdt1 <Unknown>\n"
-"Language-Team: Greek <el@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-25 19:21+0100\n"
+"PO-Revision-Date: 2013-03-25 18:21+0000\n"
+"Last-Translator: g7 <me@medesimo.eu>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-08 05:33+0000\n"
-"X-Generator: Launchpad (build 15204)\n"
-
-#: alan/core/objects/core.py:87
-msgid "Info"
-msgstr "Πληροφορίες"
-
-#: alan/ext/updates.py:58 alan/ext/places.py:56 alan-gentree.py:30
-msgid "Desktop"
-msgstr "Επιφάνεια εργασίας"
-
-#: alan/ext/updates.py:61 alan/ext/places.py:59
-msgid "Trash"
-msgstr "Κάδος Απορριμμάτων"
-
-#: alan/ext/updates.py:64 alan/ext/places.py:62
-msgid "Computer"
-msgstr "Υπολογιστής"
-
-#: alan/ext/updates.py:71 alan/ext/places.py:69
-msgid "System (/)"
-msgstr "Σύστημα Αρχείων (/)"
-
-#: alan/ext/appearance.py:39
-msgid "Add"
-msgstr "Προσθήκη"
-
-#: alan/ext/appearance.py:40
-msgid "Manage"
-msgstr "Διαχείριση"
-
-#: alan/ext/appearance.py:41
-msgid "Wallpaper"
-msgstr "Ταπετσαρία"
-
-#: alan/ext/appearance.py:43
-msgid "Appearance settings"
-msgstr "Ρυθμίσεις Εμφάνισης"
-
-#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
-msgid "Coders"
-msgstr "Προγραμματιστές"
-
-#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
-msgid "Play"
-msgstr "Αναπαραγωγή"
-
-#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
-msgid "Pause"
-msgstr "Παύση"
-
-#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
-msgid "Stop"
-msgstr "Διακοπή"
-
-#: alan/ext/music_old.py:171
-msgid "Play a random song"
-msgstr "Αναπαραγωγή τυχαίου τραγουδιού"
-
-#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
-msgid "Previous"
-msgstr "Προηγούμενο"
-
-#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
-msgid "Next"
-msgstr "Επόμενο"
-
-#: alan/ext/exaile.py:74
-msgid "Exaile is not playing."
-msgstr "Ο Exaile δεν παίζει"
-
-#: alan/ext/exaile.py:76
-msgid "Open Exaile"
-msgstr "Άνοιγμα Exaile"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:77
-msgid "Lock Screen"
-msgstr "Κλείδωμα Οθόνης"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:80 alan-gentree.py:31
-msgid "Logout"
-msgstr "Αποσύνδεση"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:119
-msgid "Switch User"
-msgstr "Εναλλαγή Χρήστη"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:114
-msgid "Guest session"
-msgstr ""
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:125
-msgid "Suspend"
-msgstr "Αναστολή"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:128
-msgid "Hibernate"
-msgstr "Αδρανοποίηση"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:134
-msgid "Shutdown"
-msgstr "Τερματισμός"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:137
-msgid "Reboot"
-msgstr "Επανεκκίνηση"
-
-#: alan/ext/logout.py:70
-msgid "(CTRL+ALT+SPACE)"
-msgstr ""
-
-#: alan/ext/logout.py:109
-msgid "Change profile image"
-msgstr ""
-
-#: alan/ext/logout.py:116
-msgid "Other..."
-msgstr ""
-
-#: alan/ext/logout.py:148
-msgid "Settings..."
-msgstr "Ρυθμίσεις..."
-
-#: alan-show-extension.py:36 alan-show-extension.py:59
-msgid "Module not found!"
-msgstr "Το άρθρωμα δε βρέθηκε!"
-
-#: alan-show-extension.py:61
-msgid "An error occurred while running the module."
-msgstr ""
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: alan-gentree.py:25
 msgid "Web Browser"
@@ -164,6 +37,14 @@ msgstr "Εφαρμογές"
 #: alan-gentree.py:29
 msgid "Places"
 msgstr "Τοποθεσίες"
+
+#: alan-gentree.py:30 alan/ext/places.py:56
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: alan-gentree.py:31 alan/ext/logout.py:50 alan/ext/logout.py:80
+msgid "Logout"
+msgstr "Αποσύνδεση"
 
 #: alan-gentree.py:32
 msgid "Extensions"
@@ -208,3 +89,127 @@ msgstr "Εμφάνιση"
 #: alan-gentree.py:42
 msgid "Install Semplice"
 msgstr "Εγκατάσταση Semplice"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Πληροφορίες"
+
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr "Προγραμματιστές"
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr "Παύση"
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr "Αναπαραγωγή τυχαίου τραγουδιού"
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr "Επόμενο"
+
+#: alan/ext/appearance.py:39
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: alan/ext/appearance.py:40
+msgid "Manage"
+msgstr "Διαχείριση"
+
+#: alan/ext/appearance.py:41
+msgid "Wallpaper"
+msgstr "Ταπετσαρία"
+
+#: alan/ext/appearance.py:43
+msgid "Appearance settings"
+msgstr "Ρυθμίσεις Εμφάνισης"
+
+#: alan/ext/appearance.py:46
+msgid "Visual effects"
+msgstr ""
+
+#: alan/ext/places.py:59
+msgid "Trash"
+msgstr "Κάδος Απορριμμάτων"
+
+#: alan/ext/places.py:62
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: alan/ext/places.py:69
+msgid "System (/)"
+msgstr "Σύστημα Αρχείων (/)"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:77
+msgid "Lock Screen"
+msgstr "Κλείδωμα Οθόνης"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:119
+msgid "Switch User"
+msgstr "Εναλλαγή Χρήστη"
+
+#: alan/ext/logout.py:50
+msgid "Guest session"
+msgstr ""
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:125
+msgid "Suspend"
+msgstr "Αναστολή"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:128
+msgid "Hibernate"
+msgstr "Αδρανοποίηση"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:134
+msgid "Shutdown"
+msgstr "Τερματισμός"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:137
+msgid "Reboot"
+msgstr "Επανεκκίνηση"
+
+#: alan/ext/logout.py:70
+msgid "(CTRL+ALT+SPACE)"
+msgstr ""
+
+#: alan/ext/logout.py:109
+msgid "Change profile image"
+msgstr ""
+
+#: alan/ext/logout.py:116
+msgid "Other..."
+msgstr ""
+
+#: alan/ext/logout.py:148
+msgid "Settings..."
+msgstr "Ρυθμίσεις..."
+
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
+msgstr "Ο Exaile δεν παίζει"
+
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
+msgstr "Άνοιγμα Exaile"
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr "Το άρθρωμα δε βρέθηκε!"
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr ""

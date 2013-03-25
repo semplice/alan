@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[alan-1.master]
+file_filter = lang/alan/<lang>.po
+source_file = lang/alan/alan.pot
+source_lang = en
+type = PO
