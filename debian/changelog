@@ -1,3 +1,11 @@
+alan (0.6.0~pre6-1) unstable; urgency=low
+
+  * ext/places: open pcmanfm with --new-win switch.
+  * ext/appearance: show paranoid item only if it is installed.
+  * Switched to Transifex.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 25 Mar 2013 19:45:51 +0100
+
 alan (0.6.0~pre5-1) unstable; urgency=low
 
   * Ensure we escape & on every label.
