@@ -25,7 +25,7 @@ infos = {"Coders":coders}
 class Extension(alan.core.extension.Extension):
 	def run(self):
 		# Initiate pipemenu
-		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="appearance", cache_trigger=(self.cfg.path,))
+		self.menu = struct.PipeMenu(use_cache=self.cfg.printv("use_cache","Alan"), cache="appearance", cache_trigger=(self.cfg.path,"/usr/bin/paranoid"))
 		if self.menu.cache_check():
 			self.menu.cache_read()
 		else:
@@ -42,12 +42,13 @@ class Extension(alan.core.extension.Extension):
 
 			themeselector = core.item(_("Appearance settings"), ga.execute("lxappearance"), icon="preferences-desktop-theme") # Theme selector
 
-			paranoid = core.item(_("Desktop effects preferences"), ga.execute("paranoid"), icon="preferences-system-windows") # paranoid
+			if os.path.exists("/usr/bin/paranoid"):
+				paranoid = core.item(_("Window effects preferences"), ga.execute("paranoid"), icon="preferences-system-windows") # paranoid
 
 			i(wallpapermenu)
 			i(core.separator)
 			i(themeselector)
-			i(paranoid)
+			if os.path.exists("/usr/bin/paranoid"): i(paranoid)
 
 			# End
 			self.menu.end()
