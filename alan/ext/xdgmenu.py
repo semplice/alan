@@ -66,7 +66,9 @@ class Extension(alan.core.extension.Extension):
 			to_skip = ("Administration", "Preferences")
 
 		# Lookup menu file
-		if os.path.exists("/etc/xdg/menus/gnome-applications.menu"):
+		if os.path.exists("/etc/xdg/menus/semplice-applications.menu"):
+			applications_menu = "semplice-applications.menu"
+		elif os.path.exists("/etc/xdg/menus/gnome-applications.menu"):
 			applications_menu = "gnome-applications.menu"
 		else:
 			applications_menu = "applications.menu" # Force to applications.menu, may fail if not existent, of course.
