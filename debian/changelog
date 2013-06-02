@@ -1,3 +1,11 @@
+alan (0.6.0~pre7-1) unstable; urgency=low
+
+  * xdgmenu/: using semplice-applications.menu
+    (a menu file that we are now shipping with alan
+    taken from GNOME 3.4) to generate the menu tree.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 02 Jun 2013 20:00:19 +0200
+
 alan (0.6.0~pre6-1) unstable; urgency=low
 
   * ext/places: open pcmanfm with --new-win switch.
