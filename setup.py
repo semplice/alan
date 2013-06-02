@@ -6,7 +6,7 @@
 from distutils.core import setup
 
 setup(name='alan',
-      version='0.6.0~pre5',
+      version='0.6.0~pre7',
       description='Openbox Menu Extension Framework',
       author='Eugenio Paolantonio and the Semplice Team',
       author_email='morarossa@gmail.com',
@@ -14,6 +14,6 @@ setup(name='alan',
      # package_dir={'bin':''},
       scripts=['alan-gentree.py', 'alan-show-extension.py'],
       packages=['alan', 'alan.core', 'alan.core.actions', 'alan.core.objects', 'alan.ext'],
-      data_files=[("/etc/alan", ["tree.conf"])],
+      data_files=[("/etc/alan", ["tree.conf"]),("/etc/xdg/menus", ["resources/semplice-applications.menu"])],
       requires=['ConfigParser', 'commands', 'gettext', 'gmenu', 'locale', 'os', 'sys', 're', 'shutil', 'xml.sax.saxutils', 't9n.library', 'hashlib'],
      )
