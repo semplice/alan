@@ -136,7 +136,8 @@ else:
 	i = menu.insert
 
 	# Header
-	i(core.header(parseheader(head)))
+	if not head == "__disabled__"
+		i(core.header(parseheader(head)))
 
 	# Begin creating menu
 	for cat in categories:

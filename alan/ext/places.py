@@ -99,7 +99,17 @@ class Extension(alan.core.extension.Extension):
 						name = " ".join(line[1:]).replace("_","__").replace("\n","")
 					else:
 						name = os.path.basename(directory.replace("file://","")).replace("_","__").replace("\n","")
-					i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon="folder"))
+					if directory.startswith("smb://"):
+						icon = "folder-remote-smb"
+					elif directory.startswith("nfs://"):
+						icon = "folder-remote-nfs"
+					elif directory.startswith("ssh://"):
+						icon = "folder-remote-ssh"
+					elif directory.startswith("ftp://"):
+						icon = "folder-remote-ftp"
+					else:
+						icon = "folder"
+					i(core.item(name, ga.execute(self.exfm(filemanager, directory)), icon=icon))
 
 			# End
 			self.menu.end()
