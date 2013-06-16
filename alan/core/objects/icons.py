@@ -8,7 +8,7 @@
 
 """ Here all CORE objects (labels, menus etc) """
 
-size = 24 # Ovverride this using the size argument on any function.
+size = 64 # Ovverride this using the size argument on any function.
 
 import os
 
