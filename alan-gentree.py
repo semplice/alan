@@ -136,7 +136,7 @@ else:
 	i = menu.insert
 
 	# Header
-	if not head == "__disabled__"
+	if not head == "__disabled__":
 		i(core.header(parseheader(head)))
 
 	# Begin creating menu
