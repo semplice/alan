@@ -1,3 +1,9 @@
+alan (0.6.0~pre8.1-1) devel; urgency=low
+
+  * alan-gentree: added missing colon.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 18 Jun 2013 11:43:39 +0200
+
 alan (0.6.0~pre8-1) devel; urgency=low
 
   * objects/icons: default to 64 size.
