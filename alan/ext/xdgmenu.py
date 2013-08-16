@@ -93,7 +93,7 @@ class Extension(alan.core.extension.Extension):
 			elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
 				command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
 				if entry.launch_in_terminal:
-					command = 'xterm -title "%s" -e %s' % \
+					command = 'x-terminal-emulator --title "%s" -e %s' % \
 						(entry.name.replace("&","and"), command)
 				
 				# New action
