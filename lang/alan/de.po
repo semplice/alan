@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-25 19:21+0100\n"
-"PO-Revision-Date: 2013-03-25 18:21+0000\n"
+"POT-Creation-Date: 2013-08-17 19:01+0200\n"
+"PO-Revision-Date: 2013-08-17 17:01+0000\n"
 "Last-Translator: g7 <me@medesimo.eu>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/semplice/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,11 +28,11 @@ msgstr "Terminal-Emulator"
 
 #: alan-gentree.py:27
 msgid "IRC Chat"
-msgstr ""
+msgstr "IRC-Chat"
 
 #: alan-gentree.py:28
 msgid "Applications"
-msgstr ""
+msgstr "Anwendungen"
 
 #: alan-gentree.py:29
 msgid "Places"
@@ -56,7 +56,7 @@ msgstr "Musik"
 
 #: alan-gentree.py:34
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 #: alan-gentree.py:35
 msgid "About Semplice..."
@@ -64,23 +64,23 @@ msgstr "Über Semplice..."
 
 #: alan-gentree.py:36
 msgid "Support"
-msgstr ""
+msgstr "Unterstützung"
 
 #: alan-gentree.py:37
 msgid "Semplice Website"
-msgstr ""
+msgstr "Semplice-Website"
 
 #: alan-gentree.py:38
 msgid "Semplice Wiki"
-msgstr ""
+msgstr "Semplice-Wiki"
 
 #: alan-gentree.py:39
 msgid "Semplice Forums"
-msgstr ""
+msgstr "Semplice-Foren"
 
 #: alan-gentree.py:40
 msgid "Semplice on IRC"
-msgstr ""
+msgstr "Semplice im IRC"
 
 #: alan-gentree.py:41
 msgid "Appearance"
@@ -96,7 +96,7 @@ msgstr "Info"
 
 #: alan/ext/music_old.py:33 alan/ext/exaile.py:21
 msgid "Coders"
-msgstr ""
+msgstr "Programmierer"
 
 #: alan/ext/music_old.py:166 alan/ext/exaile.py:57
 msgid "Play"
@@ -112,15 +112,15 @@ msgstr "Stop"
 
 #: alan/ext/music_old.py:171
 msgid "Play a random song"
-msgstr ""
+msgstr "Zufälligen Titel wiedergeben"
 
 #: alan/ext/music_old.py:186 alan/ext/exaile.py:63
 msgid "Previous"
-msgstr ""
+msgstr "Vorheriger"
 
 #: alan/ext/music_old.py:187 alan/ext/exaile.py:64
 msgid "Next"
-msgstr ""
+msgstr "Nächster"
 
 #: alan/ext/appearance.py:39
 msgid "Add"
@@ -136,7 +136,7 @@ msgstr "Hintergrundbild"
 
 #: alan/ext/appearance.py:43
 msgid "Appearance settings"
-msgstr ""
+msgstr "Erscheinungsbild-Einstellungen"
 
 #: alan/ext/appearance.py:46
 msgid "Visual effects"
@@ -164,7 +164,7 @@ msgstr "Benutzer wechseln"
 
 #: alan/ext/logout.py:50
 msgid "Guest session"
-msgstr ""
+msgstr "Gastsitzung"
 
 #: alan/ext/logout.py:50 alan/ext/logout.py:125
 msgid "Suspend"
@@ -184,15 +184,15 @@ msgstr "Neu starten"
 
 #: alan/ext/logout.py:70
 msgid "(CTRL+ALT+SPACE)"
-msgstr ""
+msgstr "(Strg+Alt+Leertaste)"
 
 #: alan/ext/logout.py:109
 msgid "Change profile image"
-msgstr ""
+msgstr "Profilbild ändern"
 
 #: alan/ext/logout.py:116
 msgid "Other..."
-msgstr ""
+msgstr "Anderes …"
 
 #: alan/ext/logout.py:148
 msgid "Settings..."
@@ -200,16 +200,16 @@ msgstr "Einstellungen..."
 
 #: alan/ext/exaile.py:74
 msgid "Exaile is not playing."
-msgstr ""
+msgstr "Es läuft keine Wiedergabe über Exaile."
 
 #: alan/ext/exaile.py:76
 msgid "Open Exaile"
-msgstr ""
+msgstr "Exaile öffnen"
 
 #: alan-show-extension.py:36 alan-show-extension.py:59
 msgid "Module not found!"
-msgstr ""
+msgstr "Modul nicht gefunden!"
 
 #: alan-show-extension.py:61
 msgid "An error occurred while running the module."
-msgstr ""
+msgstr "Beim Ausführen des Moduls ist ein Fehler aufgetreten."

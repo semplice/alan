@@ -1,6 +1,6 @@
 # -*- coding=utf-8 -*-
 # Alan Exaile plugin v0.1
-# Copyright © 2011 Semplice Team. All rights reserved.
+# Copyright © 2013 Semplice Team. All rights reserved.
 # Written by Luca B. <sidtux _AT_ gmail _DOT_ com>, released under GPLv3 license.
 
 import alan.core.structure as struct
@@ -66,12 +66,12 @@ class Extension(alan.core.extension.Extension):
             i(core.separator)
             # Displays infos about the current song
             if(self.iface.IsPlaying()):
-                i(core.item(self.iface.GetTrackAttr("title"), ga.execute(""), icon="audio-x-generic"))
-                i(core.item(self.iface.GetTrackAttr("album"), ga.execute(""), icon="media-optical"))
-                i(core.item(self.iface.GetTrackAttr("artist"), ga.execute(""), icon="audio-input-microphone"))
+                i(core.item(self.iface.GetTrackAttr("title"), ga.execute("echo"), icon="audio-x-generic"))
+                i(core.item(self.iface.GetTrackAttr("album"), ga.execute("echo"), icon="media-optical"))
+                i(core.item(self.iface.GetTrackAttr("artist"), ga.execute("echo"), icon="audio-input-microphone"))
             else:
                 #i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="/usr/share/pixmaps/exaile.png"))
-                i(core.item(_("Exaile is not playing."), ga.execute(""), icon=""))
+                i(core.item(_("Exaile is not playing."), ga.execute("echo"), icon=""))
         except dbus.exceptions.DBusException:
             i(core.item(_("Open Exaile"), ga.execute("exaile"), icon="exaile"))
             #print("Exaile is not running.")
