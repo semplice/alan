@@ -1,22 +1,149 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# 
-# Translators:
+# English (Australia) translation for alan
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the alan package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: alan\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-25 19:21+0100\n"
-"PO-Revision-Date: 2013-03-25 18:21+0000\n"
-"Last-Translator: g7 <me@medesimo.eu>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-04-29 13:43+0200\n"
+"PO-Revision-Date: 2012-02-09 07:17+0000\n"
+"Last-Translator: Joel Pickett <jlkpcktt@gmail.com>\n"
+"Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en_AU\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Launchpad-Export-Date: 2013-08-17 16:56+0000\n"
+"X-Generator: Launchpad (build 16723)\n"
+
+#: alan/core/objects/core.py:87
+msgid "Info"
+msgstr "Info"
+
+#: alan/ext/updates.py:58 alan/ext/places.py:56 alan-gentree.py:30
+msgid "Desktop"
+msgstr "Desktop"
+
+#: alan/ext/updates.py:61 alan/ext/places.py:59
+msgid "Trash"
+msgstr "Rubbish Bin"
+
+#: alan/ext/updates.py:64 alan/ext/places.py:62
+msgid "Computer"
+msgstr "Computer"
+
+#: alan/ext/updates.py:71 alan/ext/places.py:69
+msgid "System (/)"
+msgstr "System (/)"
+
+#: alan/ext/appearance.py:39
+msgid "Add"
+msgstr "Add"
+
+#: alan/ext/appearance.py:40
+msgid "Manage"
+msgstr "Manage"
+
+#: alan/ext/appearance.py:41
+msgid "Wallpaper"
+msgstr "Wallpaper"
+
+#: alan/ext/appearance.py:43
+msgid "Appearance settings"
+msgstr "Appearance settings"
+
+#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
+msgid "Coders"
+msgstr "Coders"
+
+#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
+msgid "Play"
+msgstr "Play"
+
+#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
+msgid "Pause"
+msgstr "Pause"
+
+#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
+msgid "Stop"
+msgstr "Stop"
+
+#: alan/ext/music_old.py:171
+msgid "Play a random song"
+msgstr "Play a random song"
+
+#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
+msgid "Previous"
+msgstr "Previous"
+
+#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
+msgid "Next"
+msgstr "Next"
+
+#: alan/ext/exaile.py:74
+msgid "Exaile is not playing."
+msgstr "Exaile is not playing."
+
+#: alan/ext/exaile.py:76
+msgid "Open Exaile"
+msgstr "Open Exaile"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:77
+msgid "Lock Screen"
+msgstr "Lock Screen"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:80 alan-gentree.py:31
+msgid "Logout"
+msgstr "Logout"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:119
+msgid "Switch User"
+msgstr "Switch User"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:114
+msgid "Guest session"
+msgstr ""
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:125
+msgid "Suspend"
+msgstr "Suspend"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:128
+msgid "Hibernate"
+msgstr "Hibernate"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:134
+msgid "Shutdown"
+msgstr "Shutdown"
+
+#: alan/ext/logout.py:50 alan/ext/logout.py:137
+msgid "Reboot"
+msgstr "Reboot"
+
+#: alan/ext/logout.py:70
+msgid "(CTRL+ALT+SPACE)"
+msgstr ""
+
+#: alan/ext/logout.py:109
+msgid "Change profile image"
+msgstr ""
+
+#: alan/ext/logout.py:116
+msgid "Other..."
+msgstr ""
+
+#: alan/ext/logout.py:148
+msgid "Settings..."
+msgstr "Settings..."
+
+#: alan-show-extension.py:36 alan-show-extension.py:59
+msgid "Module not found!"
+msgstr "Module not found!"
+
+#: alan-show-extension.py:61
+msgid "An error occurred while running the module."
+msgstr "An error occurred while running the module."
 
 #: alan-gentree.py:25
 msgid "Web Browser"
@@ -37,14 +164,6 @@ msgstr "Applications"
 #: alan-gentree.py:29
 msgid "Places"
 msgstr "Places"
-
-#: alan-gentree.py:30 alan/ext/places.py:56
-msgid "Desktop"
-msgstr "Desktop"
-
-#: alan-gentree.py:31 alan/ext/logout.py:50 alan/ext/logout.py:80
-msgid "Logout"
-msgstr "Logout"
 
 #: alan-gentree.py:32
 msgid "Extensions"
@@ -89,127 +208,3 @@ msgstr "Appearance"
 #: alan-gentree.py:42
 msgid "Install Semplice"
 msgstr "Install Semplice"
-
-#: alan/core/objects/core.py:87
-msgid "Info"
-msgstr "Info"
-
-#: alan/ext/music_old.py:33 alan/ext/exaile.py:21
-msgid "Coders"
-msgstr "Coders"
-
-#: alan/ext/music_old.py:166 alan/ext/exaile.py:57
-msgid "Play"
-msgstr "Play"
-
-#: alan/ext/music_old.py:167 alan/ext/exaile.py:55
-msgid "Pause"
-msgstr "Pause"
-
-#: alan/ext/music_old.py:168 alan/ext/exaile.py:59
-msgid "Stop"
-msgstr "Stop"
-
-#: alan/ext/music_old.py:171
-msgid "Play a random song"
-msgstr "Play a random song"
-
-#: alan/ext/music_old.py:186 alan/ext/exaile.py:63
-msgid "Previous"
-msgstr "Previous"
-
-#: alan/ext/music_old.py:187 alan/ext/exaile.py:64
-msgid "Next"
-msgstr "Next"
-
-#: alan/ext/appearance.py:39
-msgid "Add"
-msgstr "Add"
-
-#: alan/ext/appearance.py:40
-msgid "Manage"
-msgstr "Manage"
-
-#: alan/ext/appearance.py:41
-msgid "Wallpaper"
-msgstr "Wallpaper"
-
-#: alan/ext/appearance.py:43
-msgid "Appearance settings"
-msgstr "Appearance settings"
-
-#: alan/ext/appearance.py:46
-msgid "Visual effects"
-msgstr ""
-
-#: alan/ext/places.py:59
-msgid "Trash"
-msgstr "Rubbish Bin"
-
-#: alan/ext/places.py:62
-msgid "Computer"
-msgstr "Computer"
-
-#: alan/ext/places.py:69
-msgid "System (/)"
-msgstr "System (/)"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:77
-msgid "Lock Screen"
-msgstr "Lock Screen"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:119
-msgid "Switch User"
-msgstr "Switch User"
-
-#: alan/ext/logout.py:50
-msgid "Guest session"
-msgstr ""
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:125
-msgid "Suspend"
-msgstr "Suspend"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:128
-msgid "Hibernate"
-msgstr "Hibernate"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:134
-msgid "Shutdown"
-msgstr "Shutdown"
-
-#: alan/ext/logout.py:50 alan/ext/logout.py:137
-msgid "Reboot"
-msgstr "Reboot"
-
-#: alan/ext/logout.py:70
-msgid "(CTRL+ALT+SPACE)"
-msgstr ""
-
-#: alan/ext/logout.py:109
-msgid "Change profile image"
-msgstr ""
-
-#: alan/ext/logout.py:116
-msgid "Other..."
-msgstr ""
-
-#: alan/ext/logout.py:148
-msgid "Settings..."
-msgstr "Settings..."
-
-#: alan/ext/exaile.py:74
-msgid "Exaile is not playing."
-msgstr "Exaile is not playing."
-
-#: alan/ext/exaile.py:76
-msgid "Open Exaile"
-msgstr "Open Exaile"
-
-#: alan-show-extension.py:36 alan-show-extension.py:59
-msgid "Module not found!"
-msgstr "Module not found!"
-
-#: alan-show-extension.py:61
-msgid "An error occurred while running the module."
-msgstr "An error occurred while running the module."
