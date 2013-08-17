@@ -1,3 +1,11 @@
+alan (0.6.0-1) unstable; urgency=low
+
+  * Translations update.
+  * ext/exaile: do not fail when there is nothing to do :)
+  * Build in current.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 17 Aug 2013 19:10:36 +0200
+
 alan (0.6.0~pre9-1) devel; urgency=low
 
   * Use x-terminal-emulator instead of xterm.
