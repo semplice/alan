@@ -1,3 +1,10 @@
+alan (0.6.2-1) unstable; urgency=low
+
+  * core/objects/icons: ensure we parse path with ~.
+  * ext/xdgmenu: link to bricks if oneslip is not installed.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 20 Aug 2013 00:00:46 +0200
+
 alan (0.6.1-1) unstable; urgency=low
 
   * xdgmenu: check for oneslip
