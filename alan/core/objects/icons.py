@@ -36,6 +36,8 @@ def get_icon(icon, size=size):
 	
 	if not enabled: return None
 	
+	icon = os.path.expanduser(icon)
+	
 	if icon[0] == "/":
 		# Not a stock icon
 		if os.path.exists(icon):
