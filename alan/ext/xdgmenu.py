@@ -43,6 +43,12 @@ from xml.sax.saxutils import escape
 coders = { "Luke Macken (xdg-menu.py)":"mailto:lmacken@redhat.com", "Miroslav Lichvar (xdg-menu.py)":"mailto:mlichvar@redhat.com", "Eugenio \"g7\" Paolantonio":"http://blog.medesimo.eu" }
 infos = {"Coders":coders}
 
+# Check for oneslip
+if os.path.exists("/usr/bin/oneslip"):
+	ONESLIP = True
+else:
+	ONESLIP = False
+
 class Extension(alan.core.extension.Extension):
 	def run(self):
 				
@@ -92,6 +98,9 @@ class Extension(alan.core.extension.Extension):
 					return core.pipemenu(escape(entry.menu_id), escape(entry.name.replace("&","and")), "alan-show-extension %s %s" % (sys.argv[1], entry.menu_id), icon=entry.icon)
 			elif entry.get_type() == gmenu.TYPE_ENTRY and not entry.is_excluded:
 				command = re.sub(' [^ ]*%[fFuUdDnNickvm]', '', entry.get_exec())
+				if "oneslip" in command and not ONESLIP:
+					# oneslip not installed, return
+					return ""
 				if entry.launch_in_terminal:
 					command = 'x-terminal-emulator --title "%s" -e %s' % \
 						(entry.name.replace("&","and"), command)
