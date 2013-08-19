@@ -1,3 +1,9 @@
+alan (0.6.1-1) unstable; urgency=low
+
+  * xdgmenu: check for oneslip
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 19 Aug 2013 14:39:36 +0200
+
 alan (0.6.0-1) unstable; urgency=low
 
   * Translations update.
