@@ -291,6 +291,9 @@
         <Not><Category>X-GNOME-Settings-Panel</Category></Not>
       </And>
     </Include>
+    <Exclude>
+        <Filename>openbox.desktop</Filename>
+    </Exclude>
   </Menu> <!-- End Other -->
 
    <Layout>
